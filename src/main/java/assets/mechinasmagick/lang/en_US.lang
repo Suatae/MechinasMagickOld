@@ -1,0 +1,7 @@
+item.mechinasmagick:itemSeed.name=Ancient Seed
+item.mechinasmagick:itemSeedCuredGold.name=Ancient Seed
+item.mechinasmagick:itemSeedEncasedGold.name=Ancient Seed
+item.mechinasmagick:itemSeedPrimedGold.name=Ancient Seed
+item.mechinasmagick:fruitAncientGold.name=Ancient Fruit
+tile.mechinasmagick:blockGoldAncient.name=Ancient Crop
+itemGroup.MechinasMagick=Mechinas Magick
