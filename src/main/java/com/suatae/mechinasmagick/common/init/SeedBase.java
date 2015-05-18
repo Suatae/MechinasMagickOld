@@ -40,9 +40,9 @@ public class SeedBase extends ItemBase implements IPlantable {
 	public boolean onItemUse(ItemStack ItemStack, EntityPlayer Player, World World, int X, int Y,
 			int Z, int par7, float par8, float par9, float par10) {
 		if (par7 != 1) {
-			World.playSoundEffect(X, Y, Z, "random.break", 1.0F, 0.2F);
-			World.playSoundEffect(X, Y, Z, "random.break", 1.0F, 2.0F);
-			World.playSoundEffect(X, Y, Z, "random.pop", 0.5F, 1.0F);
+			World.playSoundEffect(X, Y, Z, REF.SOUND.FAIL01, 1.0F, 0.2F);
+			World.playSoundEffect(X, Y, Z, REF.SOUND.FAIL02, 1.0F, 2.0F);
+			World.playSoundEffect(X, Y, Z, REF.SOUND.FAIL03, 0.5F, 1.0F);
 			return false;
 		}
 		else
@@ -115,41 +115,41 @@ public class SeedBase extends ItemBase implements IPlantable {
 									&& !(c4b3 != pillar) && !(c4b4 != cap) && !(c4b5 != activator)) {
 								World.setBlock(X, Y + 1, Z, theBlockPlant);
 								--ItemStack.stackSize;
-								World.playSoundEffect(X, Y, Z, "mob.zombie.unfect", 1.0F, 2.0F);
-								World.playSoundEffect(X, Y, Z, "random.successful_hit", 0.5F, 0.5F);
+								World.playSoundEffect(X, Y, Z, REF.SOUND.SUCCESS01, 1.0F, 2.0F);
+								World.playSoundEffect(X, Y, Z, REF.SOUND.SUCCESS02, 0.5F, 0.5F);
 							}
 							return true;
 
 						}
 						else {
-							World.playSoundEffect(X, Y, Z, "random.break", 1.0F, 0.2F);
-							World.playSoundEffect(X, Y, Z, "random.break", 1.0F, 2.0F);
-							World.playSoundEffect(X, Y, Z, "random.pop", 0.5F, 1.0F);
+							World.playSoundEffect(X, Y, Z, REF.SOUND.FAIL01, 1.0F, 0.2F);
+							World.playSoundEffect(X, Y, Z, REF.SOUND.FAIL02, 1.0F, 2.0F);
+							World.playSoundEffect(X, Y, Z, REF.SOUND.FAIL03, 0.5F, 1.0F);
 							return false;
 
 						}
 
 					}
 					else {
-						World.playSoundEffect(X, Y, Z, "random.break", 1.0F, 0.2F);
-						World.playSoundEffect(X, Y, Z, "random.break", 1.0F, 2.0F);
-						World.playSoundEffect(X, Y, Z, "random.pop", 0.5F, 1.0F);
+						World.playSoundEffect(X, Y, Z, REF.SOUND.FAIL01, 1.0F, 0.2F);
+						World.playSoundEffect(X, Y, Z, REF.SOUND.FAIL02, 1.0F, 2.0F);
+						World.playSoundEffect(X, Y, Z, REF.SOUND.FAIL03, 0.5F, 1.0F);
 						return false;
 
 					}
 				}
 
 				else {
-					World.playSoundEffect(X, Y, Z, "random.break", 1.0F, 0.2F);
-					World.playSoundEffect(X, Y, Z, "random.break", 1.0F, 2.0F);
-					World.playSoundEffect(X, Y, Z, "random.pop", 0.5F, 1.0F);
+					World.playSoundEffect(X, Y, Z, REF.SOUND.FAIL01, 1.0F, 0.2F);
+					World.playSoundEffect(X, Y, Z, REF.SOUND.FAIL02, 1.0F, 2.0F);
+					World.playSoundEffect(X, Y, Z, REF.SOUND.FAIL03, 0.5F, 1.0F);
 					return false;
 				}
 			}
 			else {
-				World.playSoundEffect(X, Y, Z, "random.break", 1.0F, 0.2F);
-				World.playSoundEffect(X, Y, Z, "random.break", 1.0F, 2.0F);
-				World.playSoundEffect(X, Y, Z, "random.pop", 0.5F, 1.0F);
+				World.playSoundEffect(X, Y, Z, REF.SOUND.FAIL01, 1.0F, 0.2F);
+				World.playSoundEffect(X, Y, Z, REF.SOUND.FAIL02, 1.0F, 2.0F);
+				World.playSoundEffect(X, Y, Z, REF.SOUND.FAIL03, 0.5F, 1.0F);
 				return false;
 			}
 

@@ -3,5 +3,7 @@ item.mechinasmagick:itemSeedCuredGold.name=Ancient Seed
 item.mechinasmagick:itemSeedEncasedGold.name=Ancient Seed
 item.mechinasmagick:itemSeedPrimedGold.name=Ancient Seed
 item.mechinasmagick:fruitAncientGold.name=Ancient Fruit
+item.mechinasmagick:toolMallet.name=Mallet
 tile.mechinasmagick:blockGoldAncient.name=Ancient Crop
+tile.mechinasmagick:blockLavaStone.name=Lava Stone
 itemGroup.MechinasMagick=Mechinas Magick

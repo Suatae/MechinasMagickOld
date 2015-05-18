@@ -9,6 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
+import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.init.CropBase;
 import com.suatae.mechinasmagick.common.init.ItemReg;
 
@@ -22,8 +23,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class BlockGoldAncient extends CropBase {
 
 	public BlockGoldAncient() {
-		this.setBlockName("blockGoldAncient");
-		this.setBlockTextureName("mechinasmagick:ancient_stage_0");
+		this.setBlockName(REF.NAME.BLOCK.GOLD);
+		this.setBlockTextureName(REF.NAME.BLOCK.GOLD00);
 		this.setLightLevel(1.0F);
 	}
 
@@ -114,16 +115,16 @@ public class BlockGoldAncient extends CropBase {
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister parIIconRegister) {
 		iIcon = new IIcon[maxGrowthStage + 1];
-		iIcon[0] = parIIconRegister.registerIcon("MechinasMagick:ancient_stage_0");
-		iIcon[1] = parIIconRegister.registerIcon("MechinasMagick:ancient_stage_0");
-		iIcon[2] = parIIconRegister.registerIcon("MechinasMagick:ancient_stage_1");
-		iIcon[3] = parIIconRegister.registerIcon("MechinasMagick:ancient_stage_1");
-		iIcon[4] = parIIconRegister.registerIcon("MechinasMagick:ancient_stage_2");
-		iIcon[5] = parIIconRegister.registerIcon("MechinasMagick:ancient_stage_2");
-		iIcon[6] = parIIconRegister.registerIcon("MechinasMagick:ancient_stage_3");
-		iIcon[7] = parIIconRegister.registerIcon("MechinasMagick:ancient_stage_3");
-		iIcon[8] = parIIconRegister.registerIcon("MechinasMagick:ancient_stage_4");
-		iIcon[9] = parIIconRegister.registerIcon("MechinasMagick:ancient_stage_4");
+		iIcon[0] = parIIconRegister.registerIcon(REF.NAME.BLOCK.GOLD00);
+		iIcon[1] = parIIconRegister.registerIcon(REF.NAME.BLOCK.GOLD00);
+		iIcon[2] = parIIconRegister.registerIcon(REF.NAME.BLOCK.GOLD01);
+		iIcon[3] = parIIconRegister.registerIcon(REF.NAME.BLOCK.GOLD01);
+		iIcon[4] = parIIconRegister.registerIcon(REF.NAME.BLOCK.GOLD02);
+		iIcon[5] = parIIconRegister.registerIcon(REF.NAME.BLOCK.GOLD02);
+		iIcon[6] = parIIconRegister.registerIcon(REF.NAME.BLOCK.GOLD03);
+		iIcon[7] = parIIconRegister.registerIcon(REF.NAME.BLOCK.GOLD03);
+		iIcon[8] = parIIconRegister.registerIcon(REF.NAME.BLOCK.GOLD04);
+		iIcon[9] = parIIconRegister.registerIcon(REF.NAME.BLOCK.GOLD04);
 	}
 
 }

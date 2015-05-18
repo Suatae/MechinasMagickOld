@@ -7,6 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
+import com.suatae.mechinasmagick.client.creativetab.MechinasTabs;
 import com.suatae.mechinasmagick.common.core.lib.REF;
 
 import cpw.mods.fml.relauncher.Side;
@@ -43,6 +44,7 @@ public class FruitBase extends ItemFood {
 			int Potion03, int Duration03, int Amp03, float Prob03, int Potion04, int Duration04,
 			int Amp04, float Prob04, int Potion05, int Duration05, int Amp05, float Prob05) {
 		super(HealAmount, SaturationModifier, false);
+		this.setCreativeTab(MechinasTabs.MechinasMagick_TAB);
 
 		potionId1 = Potion01;
 		potionDuration1 = Duration01;

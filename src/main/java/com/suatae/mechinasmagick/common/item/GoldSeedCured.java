@@ -6,7 +6,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
 
-import com.suatae.mechinasmagick.client.creativetab.MechinasTabs;
+import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.init.ItemBase;
 
 
@@ -17,8 +17,7 @@ public class GoldSeedCured extends ItemBase {
 
 	public GoldSeedCured() {
 		super();
-		this.setUnlocalizedName("itemSeedCuredGold");
-		this.setCreativeTab(MechinasTabs.MechinasMagick_TAB);
+		this.setUnlocalizedName(REF.NAME.ITEM.SEEDGC);
 	}
 
 	@Override
