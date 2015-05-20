@@ -18,7 +18,8 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 
 
-@Mod(modid = REF.MOD_ID, name = REF.MOD_NAME, version = REF.VERSION, guiFactory = REF.GUI_FACTORY_CLASS)
+@Mod(modid = REF.MOD_ID, name = REF.MOD_NAME, version = REF.VERSION,
+		guiFactory = REF.GUI_FACTORY_CLASS)
 public class MechinasMagick {
 	@Mod.Instance(REF.MOD_ID)
 	public static MechinasMagick	instance;
@@ -28,22 +29,13 @@ public class MechinasMagick {
 
 	@Mod.EventHandler
 	public static void PreLoad(FMLPreInitializationEvent event) {
-
-		if (ConfigUtil.DebugMode) {
-			LogHelper.info("[Pre-Initialization]: --- Loading ---");
-		}
-
-		else {}
 		proxy.preInit();
-		// MinecraftForge.EVENT_BUS.register(new NBChunckEventHandler());
-		LogHelper.info("Bedrock Replaced");
-		// MinecraftForge.EVENT_BUS.register(new NBClientEventHandler());
-		LogHelper.info("Display Names Changed");
+		// MinecraftForge.EVENT_BUS.register(new MMClientEventHandler());
 		ConfigUtil.init(event.getSuggestedConfigurationFile());
 		FMLCommonHandler.instance().bus().register(new ConfigUtil());
 
 		if (ConfigUtil.DebugMode) {
-			LogHelper.info("[Pre-Initialization]: --- Complete! ---");
+			LogHelper.info("[Pre-Initialization]: --- Loaded ---");
 		}
 		else {}
 
@@ -52,17 +44,13 @@ public class MechinasMagick {
 	@Mod.EventHandler
 	public static void Load(FMLInitializationEvent event) {
 
-		if (ConfigUtil.DebugMode) {
-			LogHelper.info("[Initialization]: --- Loading ---");
-		}
-		else {}
 		proxy.Init();
 		BlockReg.init();
 		ItemReg.init();
 
 		if (ConfigUtil.DebugMode) {
 			LogHelper.info("The Monkey is ready with the Screwdriver");
-			LogHelper.info("[Initialization]: --- Complete! ---");
+			LogHelper.info("[Initialization]: --- Loaded ---");
 		}
 		else {}
 
@@ -72,9 +60,8 @@ public class MechinasMagick {
 	public static void PostLoad(FMLPostInitializationEvent event) {
 
 		if (ConfigUtil.DebugMode) {
-			LogHelper.info("[Post-Initialization]: --- Loading ---");
+			LogHelper.info("[Post-Initialization]: --- Loaded---");
 			proxy.postInit();
-			LogHelper.info("[Post-Initialization]: --- Complete! ---");
 		}
 		else {}
 		proxy.postInit();
