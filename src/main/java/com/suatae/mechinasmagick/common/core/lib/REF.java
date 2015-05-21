@@ -32,12 +32,17 @@ public class REF {
 
 	public static class NAME {
 		public static class ITEM {
-			public final static String	SEED	= "itemSeed";
-			public final static String	SEEDGE	= "itemSeedEncasedGold";
-			public final static String	SEEDGC	= "itemSeedCuredGold";
-			public final static String	SEEDGP	= "itemSeedPrimedGold";
-			public final static String	FRUITG	= "fruitAncientGold";
-			public final static String	WMALLET	= "woodMallet";
+			public final static String	SEED		= "itemSeed";
+			public final static String	SEEDGE		= "itemSeedEncasedGold";
+			public final static String	SEEDGC		= "itemSeedCuredGold";
+			public final static String	SEEDGP		= "itemSeedPrimedGold";
+			public final static String	FRUITG		= "fruitAncientGold";
+			public final static String	WMALLET		= "woodMallet";
+			public final static String	LEAF		= "itemLeaf";
+			public final static String	BRANCH		= "itemBranch";
+			public final static String	BUILDER		= "itemBuilder";
+			public final static String	MAGE		= "itemMage";
+			public final static String	ENGINEER	= "itemEngineer";
 		}
 
 		public static class BLOCK {

@@ -61,6 +61,8 @@ public class ToolMalletBase extends ItemSword {
 		if (itemstack.getItemDamage() == durability + 1) {
 			Player.inventory.consumeInventoryItem(this);
 
+			// FIX for EnchantmentDurability.negateDamage
+
 		}
 
 		return true;
