@@ -37,7 +37,7 @@ public class REF {
 			public final static String	SEEDGC	= "itemSeedCuredGold";
 			public final static String	SEEDGP	= "itemSeedPrimedGold";
 			public final static String	FRUITG	= "fruitAncientGold";
-			public final static String	MALLET	= "toolMallet";
+			public final static String	WMALLET	= "woodMallet";
 		}
 
 		public static class BLOCK {

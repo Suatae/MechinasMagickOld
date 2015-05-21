@@ -29,6 +29,7 @@ public class ToolMalletBase extends ItemSword {
 		this.setMaxStackSize(1);
 		this.setCreativeTab(MechinasTabs.MechinasMagick_TAB);
 		this.setMaxDamage(durability);
+		this.setFull3D();
 	}
 
 	@Override

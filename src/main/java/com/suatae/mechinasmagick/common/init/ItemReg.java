@@ -8,7 +8,7 @@ import com.suatae.mechinasmagick.common.item.GoldSeedCured;
 import com.suatae.mechinasmagick.common.item.GoldSeedEncased;
 import com.suatae.mechinasmagick.common.item.GoldSeedPrimedGold;
 import com.suatae.mechinasmagick.common.item.Seed;
-import com.suatae.mechinasmagick.common.item.ToolMallet;
+import com.suatae.mechinasmagick.common.item.WoodMallet;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -24,7 +24,7 @@ public class ItemReg {
 	public static final Item	itemEncasedGold		= new GoldSeedEncased();
 	public static final Item	itemPrimedGold		= new GoldSeedPrimedGold();
 	public static final Item	itemAncientFruit	= new GoldAncientFruit();
-	public static final Item	toolMallet			= new ToolMallet();
+	public static final Item	woodMallet			= new WoodMallet();
 
 	public static void init() {
 		GameRegistry.registerItem(itemMMSeed, "itemSeed");
@@ -32,6 +32,6 @@ public class ItemReg {
 		GameRegistry.registerItem(itemEncasedGold, "itemSeedEncasedGold");
 		GameRegistry.registerItem(itemPrimedGold, "itemSeedPrimedGold");
 		GameRegistry.registerItem(itemAncientFruit, "fruitAncientGold");
-		GameRegistry.registerItem(toolMallet, "toolMallet");
+		GameRegistry.registerItem(woodMallet, "woodMallet");
 	}
 }

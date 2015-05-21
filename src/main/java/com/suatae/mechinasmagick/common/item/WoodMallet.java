@@ -13,10 +13,10 @@ import com.suatae.mechinasmagick.common.init.ToolMalletBase;
 
 
 
-public class ToolMallet extends ToolMalletBase {
-	public ToolMallet() {
+public class WoodMallet extends ToolMalletBase {
+	public WoodMallet() {
 		super();
-		this.setUnlocalizedName(REF.NAME.ITEM.MALLET);
+		this.setUnlocalizedName(REF.NAME.ITEM.WMALLET);
 	}
 
 	@Override

@@ -7,4 +7,9 @@ public class CommonProxy {
 
 	public void postInit() {}
 
+	public void registerItemRender() {
+		// TODO Auto-generated method stub
+
+	}
+
 }
