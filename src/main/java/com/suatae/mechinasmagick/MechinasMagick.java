@@ -1,13 +1,14 @@
 package com.suatae.mechinasmagick;
 
+import com.suatae.mechinasmagick.common.core.handler.EventHandler;
 import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.init.BlockReg;
 import com.suatae.mechinasmagick.common.init.ItemReg;
 import com.suatae.mechinasmagick.proxy.CommonProxy;
 import com.suatae.mechinasmagick.utility.ConfigUtil;
 import com.suatae.mechinasmagick.utility.LogHelper;
+import com.suatae.mechinasmagick.utility.RecipeRemover;
 
-import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -26,13 +27,12 @@ public class MechinasMagick {
 
 	@SidedProxy(clientSide = REF.CLIENTSIDE, serverSide = REF.SERVERSIDE)
 	public static CommonProxy		proxy;
+	public static EventHandler		event;
 
 	@Mod.EventHandler
 	public static void PreLoad(FMLPreInitializationEvent event) {
 		proxy.preInit();
-		// MinecraftForge.EVENT_BUS.register(new MMClientEventHandler());
-		ConfigUtil.init(event.getSuggestedConfigurationFile());
-		FMLCommonHandler.instance().bus().register(new ConfigUtil());
+		EventHandler.preInit(event);
 
 		if (ConfigUtil.DebugMode) {
 			LogHelper.info("[Pre-Initialization]: --- Loaded ---");
@@ -44,9 +44,11 @@ public class MechinasMagick {
 	@Mod.EventHandler
 	public static void Load(FMLInitializationEvent event) {
 
-		proxy.Init();
 		BlockReg.init();
 		ItemReg.init();
+		proxy.Init();
+		EventHandler.Init(event);
+		RecipeRemover.voidRecipe();
 
 		if (ConfigUtil.DebugMode) {
 			LogHelper.info("The Monkey is ready with the Screwdriver");
@@ -61,10 +63,10 @@ public class MechinasMagick {
 
 		if (ConfigUtil.DebugMode) {
 			LogHelper.info("[Post-Initialization]: --- Loaded---");
-			proxy.postInit();
 		}
 		else {}
 		proxy.postInit();
+		EventHandler.postInit(event);
 
 	}
 

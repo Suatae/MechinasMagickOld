@@ -3,6 +3,8 @@ package com.suatae.mechinasmagick.common.core.lib;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 
+import com.suatae.mechinasmagick.common.init.BlockReg;
+
 
 
 
@@ -10,7 +12,7 @@ import net.minecraft.init.Blocks;
 public class REF {
 	public static final String	MOD_ID				= "MechinasMagick";
 	public static final String	MOD_NAME			= "Mechinas Magick";
-	public static final String	VERSION				= "1.7.10-1.0";
+	public static final String	VERSION				= "1.7.10-1.7";
 	public static final String	CLIENTSIDE			= "com.suatae.mechinasmagick.proxy.ClientProxy";
 	public static final String	SERVERSIDE			= "com.suatae.mechinasmagick.proxy.ServerProxy";
 	public static final String	GUI_FACTORY_CLASS	= "com.suatae.mechinasmagick.client.gui.NBGuiFactory";
@@ -24,6 +26,10 @@ public class REF {
 		public final static Block	air		= Blocks.air;
 		public final static Block	nether	= Blocks.netherrack;
 		public final static Block	fire	= Blocks.fire;
+		public final static Block	lava	= Blocks.lava;
+		public final static Block	gravel	= Blocks.gravel;
+		public final static Block	lavaS	= BlockReg.blockLavaStone;
+
 	}
 
 	public static class ITEM {
@@ -64,7 +70,7 @@ public class REF {
 		public final static String	SUCCESS01	= "mob.zombie.unfect";
 		public final static String	SUCCESS02	= "random.successful_hit";
 		public final static String	LAVASTONE	= "liquid.lavapop";
-		public final static String	FIRE		= "random.anvil_land";
+		public final static String	MALLETHIT	= "random.anvil_land";
 	}
 
 }

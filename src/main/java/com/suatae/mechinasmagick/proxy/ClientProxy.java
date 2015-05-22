@@ -24,6 +24,7 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void registerItemRender() {
 		MinecraftForgeClient.registerItemRenderer(ItemReg.woodMallet, new IRToolWoodMallet());
+
 	}
 
 }

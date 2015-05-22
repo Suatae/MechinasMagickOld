@@ -1,6 +1,8 @@
 package com.suatae.mechinasmagick.common.init;
 
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
+import net.minecraftforge.common.util.EnumHelper;
 
 import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.item.Branch;
@@ -23,6 +25,13 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 @GameRegistry.ObjectHolder(REF.MOD_ID)
 public class ItemReg {
+
+	public static ToolMaterial	MMWood				= EnumHelper.addToolMaterial("Wood", 0, 59, 0,
+															0.0F, 0);
+	public static ToolMaterial	MMStone				= EnumHelper.addToolMaterial("Stone", 0, 131,
+															0, 1.0F, 0);
+	public static ToolMaterial	MMCopper			= EnumHelper.addToolMaterial("Copper", 0, 250,
+															0, 2.0F, 0);
 
 	public static final Item	itemMMSeed			= new Seed();
 	public static final Item	itemCuredGold		= new GoldSeedCured();
