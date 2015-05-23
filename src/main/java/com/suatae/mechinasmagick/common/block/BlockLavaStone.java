@@ -70,4 +70,9 @@ public class BlockLavaStone extends BlockBase {
 			world.spawnParticle("lava", d0, d1, d2, d3, d4, d5);
 		}
 	}
+
+	@Override
+	public boolean canPlaceTorchOnTop(World world, int x, int y, int z) {
+		return false;
+	}
 }

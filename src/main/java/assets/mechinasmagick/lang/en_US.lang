@@ -14,4 +14,5 @@ item.mechinasmagick:itemMage.name=Mage
 item.mechinasmagick:itemPlantFiber.name=Plant Fiber
 tile.mechinasmagick:blockGoldAncient.name=Ancient Crop
 tile.mechinasmagick:blockLavaStone.name=Lava Stone
+tile.mechinasmagick:blockAncientSteppingStone.name=Ancient Step
 itemGroup.MechinasMagick=Mechinas Magick
