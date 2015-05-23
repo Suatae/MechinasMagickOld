@@ -14,8 +14,11 @@ import com.suatae.mechinasmagick.common.item.GoldSeedEncased;
 import com.suatae.mechinasmagick.common.item.GoldSeedPrimedGold;
 import com.suatae.mechinasmagick.common.item.Leaf;
 import com.suatae.mechinasmagick.common.item.Mage;
+import com.suatae.mechinasmagick.common.item.MalletIronSteel;
+import com.suatae.mechinasmagick.common.item.MalletStone;
+import com.suatae.mechinasmagick.common.item.MalletWood;
+import com.suatae.mechinasmagick.common.item.PlantFiber;
 import com.suatae.mechinasmagick.common.item.Seed;
-import com.suatae.mechinasmagick.common.item.WoodMallet;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -30,7 +33,7 @@ public class ItemReg {
 															0.0F, 0);
 	public static ToolMaterial	MMStone				= EnumHelper.addToolMaterial("Stone", 0, 131,
 															0, 1.0F, 0);
-	public static ToolMaterial	MMCopper			= EnumHelper.addToolMaterial("Copper", 0, 250,
+	public static ToolMaterial	MMIronSteel			= EnumHelper.addToolMaterial("Copper", 0, 250,
 															0, 2.0F, 0);
 
 	public static final Item	itemMMSeed			= new Seed();
@@ -38,12 +41,15 @@ public class ItemReg {
 	public static final Item	itemEncasedGold		= new GoldSeedEncased();
 	public static final Item	itemPrimedGold		= new GoldSeedPrimedGold();
 	public static final Item	itemAncientFruit	= new GoldAncientFruit();
-	public static final Item	woodMallet			= new WoodMallet();
+	public static final Item	woodMallet			= new MalletWood();
+	public static final Item	stoneMallet			= new MalletStone();
+	public static final Item	ironsteelMallet		= new MalletIronSteel();
 	public static final Item	itemLeaf			= new Leaf();
 	public static final Item	itemBranch			= new Branch();
 	public static final Item	itemBuilder			= new Builder();
 	public static final Item	itemEngineer		= new Engineer();
 	public static final Item	itemMage			= new Mage();
+	public static final Item	itemPlantFiber		= new PlantFiber();
 
 	public static void init() {
 		GameRegistry.registerItem(itemMMSeed, "itemSeed");
@@ -52,10 +58,13 @@ public class ItemReg {
 		GameRegistry.registerItem(itemPrimedGold, "itemSeedPrimedGold");
 		GameRegistry.registerItem(itemAncientFruit, "fruitAncientGold");
 		GameRegistry.registerItem(woodMallet, "woodMallet");
+		GameRegistry.registerItem(stoneMallet, "stoneMallet");
+		GameRegistry.registerItem(ironsteelMallet, "ironsteelMallet");
 		GameRegistry.registerItem(itemLeaf, "itemLeaf");
 		GameRegistry.registerItem(itemBranch, "itemBranch");
 		GameRegistry.registerItem(itemBuilder, "itemBuilder");
 		GameRegistry.registerItem(itemEngineer, "itemEngineer");
 		GameRegistry.registerItem(itemMage, "itemMage");
+		GameRegistry.registerItem(itemPlantFiber, "itemPlantFiber");
 	}
 }

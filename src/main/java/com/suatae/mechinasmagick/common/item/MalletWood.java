@@ -16,8 +16,8 @@ import com.suatae.mechinasmagick.common.init.ToolMalletBase;
 
 
 
-public class WoodMallet extends ToolMalletBase {
-	public WoodMallet() {
+public class MalletWood extends ToolMalletBase {
+	public MalletWood() {
 		super(ItemReg.MMWood);
 		this.setUnlocalizedName(REF.NAME.ITEM.WMALLET);
 		this.setMaxDamage(ToolMalletBase.Wooddurability);

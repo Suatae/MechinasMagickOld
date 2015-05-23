@@ -12,7 +12,7 @@ import com.suatae.mechinasmagick.common.init.BlockReg;
 public class REF {
 	public static final String	MOD_ID				= "MechinasMagick";
 	public static final String	MOD_NAME			= "Mechinas Magick";
-	public static final String	VERSION				= "1.7.10-1.7";
+	public static final String	VERSION				= "1.7.10-1.8";
 	public static final String	CLIENTSIDE			= "com.suatae.mechinasmagick.proxy.ClientProxy";
 	public static final String	SERVERSIDE			= "com.suatae.mechinasmagick.proxy.ServerProxy";
 	public static final String	GUI_FACTORY_CLASS	= "com.suatae.mechinasmagick.client.gui.NBGuiFactory";
@@ -44,11 +44,14 @@ public class REF {
 			public final static String	SEEDGP		= "itemSeedPrimedGold";
 			public final static String	FRUITG		= "fruitAncientGold";
 			public final static String	WMALLET		= "woodMallet";
+			public final static String	SMallet		= "stoneMallet";
+			public final static String	ISMallet	= "ironsteelMallet";
 			public final static String	LEAF		= "itemLeaf";
 			public final static String	BRANCH		= "itemBranch";
 			public final static String	BUILDER		= "itemBuilder";
 			public final static String	MAGE		= "itemMage";
 			public final static String	ENGINEER	= "itemEngineer";
+			public final static String	PLANTFIBER	= "itemPlantFiber";
 		}
 
 		public static class BLOCK {

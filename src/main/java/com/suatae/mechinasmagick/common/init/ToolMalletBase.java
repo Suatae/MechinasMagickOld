@@ -21,7 +21,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class ToolMalletBase extends ItemSword {
 	public static int	Wooddurability		= 59;
 	public static int	Stonedurability		= 131;
-	public static int	Copperdurability	= 250;
+	public static int	Ironsteeldurability	= 250;
 
 	public ToolMalletBase(ToolMaterial Mat) {
 		super(Mat);

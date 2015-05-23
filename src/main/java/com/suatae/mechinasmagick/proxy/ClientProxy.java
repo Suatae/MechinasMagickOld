@@ -2,6 +2,8 @@ package com.suatae.mechinasmagick.proxy;
 
 import net.minecraftforge.client.MinecraftForgeClient;
 
+import com.suatae.mechinasmagick.client.renders.IRToolIronSteelMallet;
+import com.suatae.mechinasmagick.client.renders.IRToolStoneMallet;
 import com.suatae.mechinasmagick.client.renders.IRToolWoodMallet;
 import com.suatae.mechinasmagick.common.init.ItemReg;
 
@@ -24,6 +26,8 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void registerItemRender() {
 		MinecraftForgeClient.registerItemRenderer(ItemReg.woodMallet, new IRToolWoodMallet());
+		MinecraftForgeClient.registerItemRenderer(ItemReg.stoneMallet, new IRToolStoneMallet());
+		MinecraftForgeClient.registerItemRenderer(ItemReg.ironsteelMallet, new IRToolIronSteelMallet());
 
 	}
 
