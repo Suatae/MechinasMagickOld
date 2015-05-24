@@ -6,10 +6,10 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EnumCreatureType;
-import net.minecraft.init.Blocks;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.ForgeDirection;
 
 import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.init.BlockBase;
@@ -25,7 +25,7 @@ public class BlockAncientSteppingStone extends BlockBase {
 	public BlockAncientSteppingStone() {
 		super(Material.rock);
 		this.setBlockName(REF.NAME.BLOCK.ASTEPPING);
-		this.setBlockTextureName(REF.NAME.BLOCK.LAVA);
+		this.setBlockTextureName(REF.NAME.BLOCK.ASTEPPING);
 		this.setStepSound(Block.soundTypeStone);
 		this.setBlockUnbreakable();
 		this.setTickRandomly(true);
@@ -37,8 +37,20 @@ public class BlockAncientSteppingStone extends BlockBase {
 	}
 
 	@Override
+	public void onNeighborBlockChange(World world, int X, int Y, int Z, Block block) {
+
+		for (ForgeDirection d : ForgeDirection.VALID_DIRECTIONS) {
+			Block lava = world.getBlock(X + d.offsetX, Y + d.offsetY, Z + d.offsetZ);
+			if (!(lava != REF.BLOCK.lava)) {
+				world.setBlock(X, Y, Z, REF.BLOCK.lava);
+			}
+		}
+
+	};
+
+	@Override
 	public void onEntityWalking(World world, int X, int Y, int Z, Entity entity) {
-		world.setBlock(X, Y, Z, Blocks.air);
+		world.setBlock(X, Y, Z, REF.BLOCK.lava);
 	}
 
 	@Override

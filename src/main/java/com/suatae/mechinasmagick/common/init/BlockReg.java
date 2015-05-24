@@ -2,6 +2,8 @@ package com.suatae.mechinasmagick.common.init;
 
 import net.minecraft.block.Block;
 
+import com.suatae.mechinasmagick.common.block.BlockAncientDoor;
+import com.suatae.mechinasmagick.common.block.BlockAncientSeedCase;
 import com.suatae.mechinasmagick.common.block.BlockAncientSteppingStone;
 import com.suatae.mechinasmagick.common.block.BlockGoldAncient;
 import com.suatae.mechinasmagick.common.block.BlockLavaStone;
@@ -19,10 +21,14 @@ public class BlockReg {
 	public static final Block	blockAncientGold	= new BlockGoldAncient();
 	public static final Block	blockLavaStone		= new BlockLavaStone();
 	public static final Block	blockAStepping		= new BlockAncientSteppingStone();
+	public static final Block	blockADoor			= new BlockAncientDoor();
+	public static final Block	blockASCase			= new BlockAncientSeedCase();
 
 	public static void init() {
 		GameRegistry.registerBlock(blockAncientGold, "blockGoldAncient");
 		GameRegistry.registerBlock(blockLavaStone, "blockLavaStone");
 		GameRegistry.registerBlock(blockAStepping, "blockAncientSteppingStone");
+		GameRegistry.registerBlock(blockADoor, "blockAncientDoor");
+		GameRegistry.registerBlock(blockASCase, "blockAncientSeedCase");
 	}
 }

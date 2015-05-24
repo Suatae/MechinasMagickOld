@@ -12,7 +12,7 @@ import com.suatae.mechinasmagick.common.init.BlockReg;
 public class REF {
 	public static final String	MOD_ID				= "MechinasMagick";
 	public static final String	MOD_NAME			= "Mechinas Magick";
-	public static final String	VERSION				= "1.7.10-1.9";
+	public static final String	VERSION				= "1.7.10-1.10";
 	public static final String	CLIENTSIDE			= "com.suatae.mechinasmagick.proxy.ClientProxy";
 	public static final String	SERVERSIDE			= "com.suatae.mechinasmagick.proxy.ServerProxy";
 	public static final String	GUI_FACTORY_CLASS	= "com.suatae.mechinasmagick.client.gui.NBGuiFactory";
@@ -22,6 +22,10 @@ public class REF {
 
 	public static class BLOCK {
 		public final static Block	stone	= Blocks.stonebrick;
+		public final static Block	stone01	= Blocks.stone;
+		public final static Block	sand	= Blocks.sand;
+		public final static Block	grass	= Blocks.grass;
+		public final static Block	mush	= Blocks.mycelium;
 		public final static Block	gold	= Blocks.gold_block;
 		public final static Block	air		= Blocks.air;
 		public final static Block	nether	= Blocks.netherrack;
@@ -29,6 +33,15 @@ public class REF {
 		public final static Block	lava	= Blocks.lava;
 		public final static Block	gravel	= Blocks.gravel;
 		public final static Block	lavaS	= BlockReg.blockLavaStone;
+
+		public static class PILLAR {
+			public final static Block	Main		= Blocks.stonebrick;
+			public final static Block	Glyph		= Blocks.obsidian;
+			public final static Block	Core		= BlockReg.blockASCase;
+			public final static Block	Catalyst	= Blocks.brick_block;
+			public final static Block	Step		= BlockReg.blockAStepping;
+			public final static Block	Door		= BlockReg.blockADoor;
+		}
 
 	}
 
@@ -63,6 +76,8 @@ public class REF {
 			public final static String	GOLD04		= "MechinasMagick:ancient_gold_4";
 			public final static String	LAVA		= "blockLavaStone";
 			public final static String	ASTEPPING	= "blockAncientSteppingStone";
+			public final static String	ADOOR		= "blockAncientDoor";
+			public final static String	ASCASE		= "blockAncientSeedCase";
 		}
 
 	}

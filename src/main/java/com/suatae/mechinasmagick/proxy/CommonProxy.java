@@ -12,4 +12,9 @@ public class CommonProxy {
 
 	}
 
+	public void registerTESRender() {
+		// TODO Auto-generated method stub
+
+	}
+
 }

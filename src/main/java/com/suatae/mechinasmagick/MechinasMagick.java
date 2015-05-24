@@ -1,6 +1,7 @@
 package com.suatae.mechinasmagick;
 
 import com.suatae.mechinasmagick.common.core.handler.EventHandler;
+import com.suatae.mechinasmagick.common.core.handler.GenHandler;
 import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.init.BlockReg;
 import com.suatae.mechinasmagick.common.init.ItemReg;
@@ -32,6 +33,7 @@ public class MechinasMagick {
 	@Mod.EventHandler
 	public static void PreLoad(FMLPreInitializationEvent event) {
 		proxy.preInit();
+		GenHandler.preInit();
 		EventHandler.preInit(event);
 
 		if (ConfigUtil.DebugMode) {
@@ -47,6 +49,7 @@ public class MechinasMagick {
 		BlockReg.init();
 		ItemReg.init();
 		proxy.Init();
+		GenHandler.Init();
 		EventHandler.Init(event);
 		RecipeRemover.voidRecipe();
 
@@ -66,6 +69,7 @@ public class MechinasMagick {
 		}
 		else {}
 		proxy.postInit();
+		GenHandler.postInit();
 		EventHandler.postInit(event);
 
 	}
