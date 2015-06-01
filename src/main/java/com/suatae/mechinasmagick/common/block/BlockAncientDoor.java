@@ -23,6 +23,7 @@ public class BlockAncientDoor extends BlockBase {
 		this.setStepSound(Block.soundTypeStone);
 		this.setBlockUnbreakable();
 		this.setTickRandomly(true);
+		this.setBlockBounds(0.095F, 0, 0, 0.905F, 1.0F, 1.0F);
 	}
 
 	@Override
@@ -32,6 +33,16 @@ public class BlockAncientDoor extends BlockBase {
 
 	@Override
 	public boolean canPlaceTorchOnTop(World world, int x, int y, int z) {
+		return false;
+	}
+
+	@Override
+	public boolean renderAsNormalBlock() {
+		return false;
+	}
+
+	@Override
+	public boolean isOpaqueCube() {
 		return false;
 	}
 

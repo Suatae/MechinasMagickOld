@@ -2,10 +2,9 @@ package com.suatae.mechinasmagick.common.init;
 
 import java.util.Random;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.IGrowable;
-import net.minecraft.init.Blocks;
+import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
@@ -23,20 +22,21 @@ public class CropBase extends BlockBush implements IGrowable {
 	@SideOnly(Side.CLIENT)
 	protected IIcon[]	iIcon;
 
-	public CropBase() {
+	public CropBase(Material mat) {
 
+		super(mat);
 		this.setTickRandomly(true);
-		float f = 0.5F;
-		this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, 0.25F, 0.5F + f);
 		this.setCreativeTab(null);
 		this.setHardness(0.0F);
 		this.setStepSound(soundTypeGrass);
 		this.disableStats();
+
 	}
 
 	@Override
-	protected boolean canPlaceBlockOn(Block Block) {
-		return Block == Blocks.gold_block;
+	@SideOnly(Side.CLIENT)
+	public IIcon getIcon(int Side, int GrowthStage) {
+		return iIcon[GrowthStage];
 	}
 
 	public void incrementGrowStage(World World, Random Rand, int X, int Y, int Z) {
@@ -57,13 +57,7 @@ public class CropBase extends BlockBush implements IGrowable {
 
 	@Override
 	public int getRenderType() {
-		return 1;
-	}
-
-	@Override
-	@SideOnly(Side.CLIENT)
-	public IIcon getIcon(int Side, int GrowthStage) {
-		return iIcon[GrowthStage];
+		return 0;
 	}
 
 	@Override

@@ -1,4 +1,4 @@
-package com.suatae.mechinasmagick.common.item;
+package com.suatae.mechinasmagick.common.item.goldseed;
 
 import java.util.List;
 

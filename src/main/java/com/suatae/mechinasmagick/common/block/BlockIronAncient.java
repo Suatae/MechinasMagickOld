@@ -16,7 +16,7 @@ import net.minecraft.world.World;
 import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.init.CropBase;
 import com.suatae.mechinasmagick.common.init.ItemReg;
-import com.suatae.mechinasmagick.common.tileentity.TileEntityGoldCrop;
+import com.suatae.mechinasmagick.common.tileentity.TileEntityIronCrop;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -25,25 +25,24 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 
 
-public class BlockGoldAncient extends CropBase implements ITileEntityProvider {
+public class BlockIronAncient extends CropBase implements ITileEntityProvider {
 
-	public BlockGoldAncient() {
-		super(Material.rock);
-		this.setBlockName(REF.NAME.BLOCK.GOLD);
-		this.setBlockTextureName(REF.NAME.BLOCK.GOLD00);
+	public BlockIronAncient() {
+		super(Material.web);
+		this.setBlockName(REF.NAME.BLOCK.IRON);
+		this.setBlockTextureName(REF.NAME.BLOCK.IRON00);
 		this.setLightLevel(1.0F);
-		this.setBlockBounds(0.35F, 0.05F, 0.35F, 0.65F, 0.60F, 0.65F);
-
+		this.setBlockBounds(0.35F, 0.40F, 0.35F, 0.65F, 0.95F, 0.65F);
 	}
 
 	@Override
 	public TileEntity createNewTileEntity(World var1, int var2) {
-		return new TileEntityGoldCrop();
+		return new TileEntityIronCrop();
 	}
 
 	@Override
 	protected boolean canPlaceBlockOn(Block Block) {
-		return Block == REF.BLOCK.SEED.SOIL;
+		return Block == REF.BLOCK.air;
 	}
 
 	@Override
@@ -122,27 +121,27 @@ public class BlockGoldAncient extends CropBase implements ITileEntityProvider {
 	}
 
 	protected Item PRIMED_SEED() {
-		return ItemReg.itemPrimedGold;
+		return ItemReg.itemPrimedIron;
 	}
 
 	protected Item FRUIT() {
-		return ItemReg.itemAncientFruitGold;
+		return ItemReg.itemAncientFruitIron;
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister parIIconRegister) {
 		iIcon = new IIcon[maxGrowthStage + 1];
-		iIcon[0] = parIIconRegister.registerIcon(REF.NAME.BLOCK.GOLD00);
-		iIcon[1] = parIIconRegister.registerIcon(REF.NAME.BLOCK.GOLD00);
-		iIcon[2] = parIIconRegister.registerIcon(REF.NAME.BLOCK.GOLD01);
-		iIcon[3] = parIIconRegister.registerIcon(REF.NAME.BLOCK.GOLD01);
-		iIcon[4] = parIIconRegister.registerIcon(REF.NAME.BLOCK.GOLD02);
-		iIcon[5] = parIIconRegister.registerIcon(REF.NAME.BLOCK.GOLD02);
-		iIcon[6] = parIIconRegister.registerIcon(REF.NAME.BLOCK.GOLD03);
-		iIcon[7] = parIIconRegister.registerIcon(REF.NAME.BLOCK.GOLD03);
-		iIcon[8] = parIIconRegister.registerIcon(REF.NAME.BLOCK.GOLD04);
-		iIcon[9] = parIIconRegister.registerIcon(REF.NAME.BLOCK.GOLD04);
+		iIcon[0] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON00);
+		iIcon[1] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON00);
+		iIcon[2] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON01);
+		iIcon[3] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON01);
+		iIcon[4] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON02);
+		iIcon[5] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON02);
+		iIcon[6] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON03);
+		iIcon[7] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON03);
+		iIcon[8] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON04);
+		iIcon[9] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON04);
 	}
 
 }

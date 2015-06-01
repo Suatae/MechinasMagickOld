@@ -129,10 +129,10 @@ public class WorldGenSeedPillar implements IWorldGenerator {
 						world.setBlock(X - 2, Y, Z + 4, REF.BLOCK.PILLAR.Main, random.nextInt(), 2);
 						world.setBlock(X - 2, Y, Z - 4, REF.BLOCK.PILLAR.Main, random.nextInt(), 2);
 						// ALT
-						world.setBlock(X + 3, Y, Z + 1 + -e, REF.BLOCK.PILLAR.Main, 3, 2);
-						world.setBlock(X - 3, Y, Z + 1 + -e, REF.BLOCK.PILLAR.Main, 3, 2);
-						world.setBlock(X + 1 + -e, Y, Z + 4, REF.BLOCK.PILLAR.Main, 3, 2);
-						world.setBlock(X + 1 + -e, Y, Z - 4, REF.BLOCK.PILLAR.Main, 3, 2);
+						world.setBlock(X + 3, Y, Z + 1 + -e, REF.BLOCK.PILLAR.Design, 2, 2);
+						world.setBlock(X - 3, Y, Z + 1 + -e, REF.BLOCK.PILLAR.Design, 2, 2);
+						world.setBlock(X + 1 + -e, Y, Z + 4, REF.BLOCK.PILLAR.Design, 2, 2);
+						world.setBlock(X + 1 + -e, Y, Z - 4, REF.BLOCK.PILLAR.Design, 2, 2);
 						// Layer 1
 						// Center
 						world.setBlock(X + 2 + -ee, Y + 1, Z, REF.BLOCK.PILLAR.Step, 0, 2);
@@ -167,7 +167,7 @@ public class WorldGenSeedPillar implements IWorldGenerator {
 						world.setBlock(X + 1 - e, Y + 2, Z + 2 - ee, REF.BLOCK.air, 0, 2);
 						world.setBlock(X + 1 - e, Y + 2, Z - 1 - ee, REF.BLOCK.air, 0, 2);
 						// Center
-						world.setBlock(X, Y + 2, Z, REF.BLOCK.PILLAR.Catalyst, random.nextInt(), 2);
+						world.setBlock(X, Y + 2, Z, REF.BLOCK.PILLAR.Catalyst, 0, 2);
 						// Outer
 						world.setBlock(X + 2, Y + 2, Z + 2 - ee, REF.BLOCK.PILLAR.Main,
 								random.nextInt(), 2);
@@ -243,56 +243,56 @@ public class WorldGenSeedPillar implements IWorldGenerator {
 		for (int i = 0; i < 11; i++)
 			for (int ii = 0; ii < 3; ii++) {
 				// Outer Inner
-				world.setBlock(X, Y + 15 - i, Z + 4, REF.BLOCK.PILLAR.Main, 3, 2);
-				world.setBlock(X, Y + 15 - i, Z - 4, REF.BLOCK.PILLAR.Main, 3, 2);
+				world.setBlock(X, Y + 15 - i, Z + 4, REF.BLOCK.PILLAR.Design, 2, 2);
+				world.setBlock(X, Y + 15 - i, Z - 4, REF.BLOCK.PILLAR.Design, 2, 2);
 				// Outer Design 01
-				world.setBlock(X + 1, Y + 15, Z + 4, REF.BLOCK.PILLAR.Main, 3, 2);
+				world.setBlock(X + 1, Y + 15, Z + 4, REF.BLOCK.PILLAR.Design, 2, 2);
 				world.setBlock(X + 1, Y + 14, Z + 4, REF.BLOCK.PILLAR.Main, random.nextInt(), 2);
-				world.setBlock(X + 1, Y + 13, Z + 4, REF.BLOCK.PILLAR.Main, 3, 2);
+				world.setBlock(X + 1, Y + 13, Z + 4, REF.BLOCK.PILLAR.Design, 2, 2);
 				world.setBlock(X + 1, Y + 12, Z + 4, REF.BLOCK.PILLAR.Main, random.nextInt(), 2);
-				world.setBlock(X + 1, Y + 11, Z + 4, REF.BLOCK.PILLAR.Main, 3, 2);
+				world.setBlock(X + 1, Y + 11, Z + 4, REF.BLOCK.PILLAR.Design, 2, 2);
 				world.setBlock(X + 1, Y + 10, Z + 4, REF.BLOCK.PILLAR.Main, random.nextInt(), 2);
-				world.setBlock(X + 1, Y + 9, Z + 4, REF.BLOCK.PILLAR.Main, 3, 2);
+				world.setBlock(X + 1, Y + 9, Z + 4, REF.BLOCK.PILLAR.Design, 2, 2);
 				world.setBlock(X + 1, Y + 8, Z + 4, REF.BLOCK.PILLAR.Main, random.nextInt(), 2);
-				world.setBlock(X + 1, Y + 7, Z + 4, REF.BLOCK.PILLAR.Main, 3, 2);
+				world.setBlock(X + 1, Y + 7, Z + 4, REF.BLOCK.PILLAR.Design, 2, 2);
 				world.setBlock(X + 1, Y + 6, Z + 4, REF.BLOCK.PILLAR.Main, random.nextInt(), 2);
-				world.setBlock(X + 1, Y + 5, Z + 4, REF.BLOCK.PILLAR.Main, 3, 2);
+				world.setBlock(X + 1, Y + 5, Z + 4, REF.BLOCK.PILLAR.Design, 2, 2);
 				// Outer Design 02
-				world.setBlock(X - 1, Y + 15, Z + 4, REF.BLOCK.PILLAR.Main, 3, 2);
+				world.setBlock(X - 1, Y + 15, Z + 4, REF.BLOCK.PILLAR.Design, 2, 2);
 				world.setBlock(X - 1, Y + 14, Z + 4, REF.BLOCK.PILLAR.Main, random.nextInt(), 2);
-				world.setBlock(X - 1, Y + 13, Z + 4, REF.BLOCK.PILLAR.Main, 3, 2);
+				world.setBlock(X - 1, Y + 13, Z + 4, REF.BLOCK.PILLAR.Design, 2, 2);
 				world.setBlock(X - 1, Y + 12, Z + 4, REF.BLOCK.PILLAR.Main, random.nextInt(), 2);
-				world.setBlock(X - 1, Y + 11, Z + 4, REF.BLOCK.PILLAR.Main, 3, 2);
+				world.setBlock(X - 1, Y + 11, Z + 4, REF.BLOCK.PILLAR.Design, 2, 2);
 				world.setBlock(X - 1, Y + 10, Z + 4, REF.BLOCK.PILLAR.Main, random.nextInt(), 2);
-				world.setBlock(X - 1, Y + 9, Z + 4, REF.BLOCK.PILLAR.Main, 3, 2);
+				world.setBlock(X - 1, Y + 9, Z + 4, REF.BLOCK.PILLAR.Design, 2, 2);
 				world.setBlock(X - 1, Y + 8, Z + 4, REF.BLOCK.PILLAR.Main, random.nextInt(), 2);
-				world.setBlock(X - 1, Y + 7, Z + 4, REF.BLOCK.PILLAR.Main, 3, 2);
+				world.setBlock(X - 1, Y + 7, Z + 4, REF.BLOCK.PILLAR.Design, 2, 2);
 				world.setBlock(X - 1, Y + 6, Z + 4, REF.BLOCK.PILLAR.Main, random.nextInt(), 2);
-				world.setBlock(X - 1, Y + 5, Z + 4, REF.BLOCK.PILLAR.Main, 3, 2);
+				world.setBlock(X - 1, Y + 5, Z + 4, REF.BLOCK.PILLAR.Design, 2, 2);
 				// Outer Design 03
-				world.setBlock(X + 1, Y + 15, Z - 4, REF.BLOCK.PILLAR.Main, 3, 2);
+				world.setBlock(X + 1, Y + 15, Z - 4, REF.BLOCK.PILLAR.Design, 2, 2);
 				world.setBlock(X + 1, Y + 14, Z - 4, REF.BLOCK.PILLAR.Main, random.nextInt(), 2);
-				world.setBlock(X + 1, Y + 13, Z - 4, REF.BLOCK.PILLAR.Main, 3, 2);
+				world.setBlock(X + 1, Y + 13, Z - 4, REF.BLOCK.PILLAR.Design, 2, 2);
 				world.setBlock(X + 1, Y + 12, Z - 4, REF.BLOCK.PILLAR.Main, random.nextInt(), 2);
-				world.setBlock(X + 1, Y + 11, Z - 4, REF.BLOCK.PILLAR.Main, 3, 2);
+				world.setBlock(X + 1, Y + 11, Z - 4, REF.BLOCK.PILLAR.Design, 2, 2);
 				world.setBlock(X + 1, Y + 10, Z - 4, REF.BLOCK.PILLAR.Main, random.nextInt(), 2);
-				world.setBlock(X + 1, Y + 9, Z - 4, REF.BLOCK.PILLAR.Main, 3, 2);
+				world.setBlock(X + 1, Y + 9, Z - 4, REF.BLOCK.PILLAR.Design, 2, 2);
 				world.setBlock(X + 1, Y + 8, Z - 4, REF.BLOCK.PILLAR.Main, random.nextInt(), 2);
-				world.setBlock(X + 1, Y + 7, Z - 4, REF.BLOCK.PILLAR.Main, 3, 2);
+				world.setBlock(X + 1, Y + 7, Z - 4, REF.BLOCK.PILLAR.Design, 2, 2);
 				world.setBlock(X + 1, Y + 6, Z - 4, REF.BLOCK.PILLAR.Main, random.nextInt(), 2);
-				world.setBlock(X + 1, Y + 5, Z - 4, REF.BLOCK.PILLAR.Main, 3, 2);
+				world.setBlock(X + 1, Y + 5, Z - 4, REF.BLOCK.PILLAR.Design, 2, 2);
 				// Outer Design 04
-				world.setBlock(X - 1, Y + 15, Z - 4, REF.BLOCK.PILLAR.Main, 3, 2);
+				world.setBlock(X - 1, Y + 15, Z - 4, REF.BLOCK.PILLAR.Design, 2, 2);
 				world.setBlock(X - 1, Y + 14, Z - 4, REF.BLOCK.PILLAR.Main, random.nextInt(), 2);
-				world.setBlock(X - 1, Y + 13, Z - 4, REF.BLOCK.PILLAR.Main, 3, 2);
+				world.setBlock(X - 1, Y + 13, Z - 4, REF.BLOCK.PILLAR.Design, 2, 2);
 				world.setBlock(X - 1, Y + 12, Z - 4, REF.BLOCK.PILLAR.Main, random.nextInt(), 2);
-				world.setBlock(X - 1, Y + 11, Z - 4, REF.BLOCK.PILLAR.Main, 3, 2);
+				world.setBlock(X - 1, Y + 11, Z - 4, REF.BLOCK.PILLAR.Design, 2, 2);
 				world.setBlock(X - 1, Y + 10, Z - 4, REF.BLOCK.PILLAR.Main, random.nextInt(), 2);
-				world.setBlock(X - 1, Y + 9, Z - 4, REF.BLOCK.PILLAR.Main, 3, 2);
+				world.setBlock(X - 1, Y + 9, Z - 4, REF.BLOCK.PILLAR.Design, 2, 2);
 				world.setBlock(X - 1, Y + 8, Z - 4, REF.BLOCK.PILLAR.Main, random.nextInt(), 2);
-				world.setBlock(X - 1, Y + 7, Z - 4, REF.BLOCK.PILLAR.Main, 3, 2);
+				world.setBlock(X - 1, Y + 7, Z - 4, REF.BLOCK.PILLAR.Design, 2, 2);
 				world.setBlock(X - 1, Y + 6, Z - 4, REF.BLOCK.PILLAR.Main, random.nextInt(), 2);
-				world.setBlock(X - 1, Y + 5, Z - 4, REF.BLOCK.PILLAR.Main, 3, 2);
+				world.setBlock(X - 1, Y + 5, Z - 4, REF.BLOCK.PILLAR.Design, 2, 2);
 				// Outer Top
 				world.setBlock(X + 1 - ii, Y + 16, Z + 4, REF.BLOCK.PILLAR.Main, random.nextInt(),
 						2);
@@ -349,12 +349,18 @@ public class WorldGenSeedPillar implements IWorldGenerator {
 						world.setBlock(X - 2, Y + 16, Z - 1, REF.BLOCK.PILLAR.Main,
 								random.nextInt(), 2);
 
-						world.setBlock(X + 2, Y + 16 - ii, Z, REF.BLOCK.PILLAR.Glyph, 0, 2);
-						world.setBlock(X + 2, Y + 15 - ee, Z + 1, REF.BLOCK.PILLAR.Glyph, 0, 2);
-						world.setBlock(X + 2, Y + 15 - ee, Z - 1, REF.BLOCK.PILLAR.Glyph, 0, 2);
-						world.setBlock(X - 2, Y + 16 - ii, Z, REF.BLOCK.PILLAR.Glyph, 0, 2);
-						world.setBlock(X - 2, Y + 15 - ee, Z + 1, REF.BLOCK.PILLAR.Glyph, 0, 2);
-						world.setBlock(X - 2, Y + 15 - ee, Z - 1, REF.BLOCK.PILLAR.Glyph, 0, 2);
+						world.setBlock(X + 2, Y + 16 - ii, Z, REF.BLOCK.PILLAR.Glyph,
+								random.nextInt(2), 2);
+						world.setBlock(X + 2, Y + 15 - ee, Z + 1, REF.BLOCK.PILLAR.Glyph,
+								random.nextInt(2), 2);
+						world.setBlock(X + 2, Y + 15 - ee, Z - 1, REF.BLOCK.PILLAR.Glyph,
+								random.nextInt(2), 2);
+						world.setBlock(X - 2, Y + 16 - ii, Z, REF.BLOCK.PILLAR.Glyph,
+								random.nextInt(2), 2);
+						world.setBlock(X - 2, Y + 15 - ee, Z + 1, REF.BLOCK.PILLAR.Glyph,
+								random.nextInt(2), 2);
+						world.setBlock(X - 2, Y + 15 - ee, Z - 1, REF.BLOCK.PILLAR.Glyph,
+								random.nextInt(2), 2);
 
 						// Center Outer
 						world.setBlock(X + 3, Y + 17 - i, Z + 2, REF.BLOCK.PILLAR.Main,

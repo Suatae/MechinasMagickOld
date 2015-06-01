@@ -1,4 +1,4 @@
-package com.suatae.mechinasmagick.common.item;
+package com.suatae.mechinasmagick.common.item.goldseed;
 
 import java.util.List;
 
@@ -13,17 +13,16 @@ import com.suatae.mechinasmagick.common.init.ItemBase;
 
 
 
-public class GoldSeedCured extends ItemBase {
+public class GoldSeedEncased extends ItemBase {
 
-	public GoldSeedCured() {
+	public GoldSeedEncased() {
 		super();
-		this.setUnlocalizedName(REF.NAME.ITEM.SEEDGC);
+		this.setUnlocalizedName(REF.NAME.ITEM.SEEDGE);
 	}
 
 	@Override
 	public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
 		list.add(EnumChatFormatting.GREEN + "-" + EnumChatFormatting.YELLOW + "Gold "
 				+ EnumChatFormatting.GREEN + "Encased");
-		list.add(EnumChatFormatting.BLUE + "-Cured");
 	}
 }

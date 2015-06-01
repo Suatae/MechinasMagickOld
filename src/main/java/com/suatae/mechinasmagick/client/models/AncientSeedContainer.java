@@ -11,7 +11,7 @@ import net.minecraft.entity.Entity;
 /**
  * Cache - Omegami Created using Tabula 4.1.1
  */
-public class AncientSeedCase extends ModelBase {
+public class AncientSeedContainer extends ModelBase {
 	public ModelRenderer	shape1;
 	public ModelRenderer	shape1_1;
 	public ModelRenderer	shape1_2;
@@ -67,7 +67,7 @@ public class AncientSeedCase extends ModelBase {
 	public ModelRenderer	shape4_13;
 	public ModelRenderer	shape4_14;
 
-	public AncientSeedCase() {
+	public AncientSeedContainer() {
 		this.textureWidth = 256;
 		this.textureHeight = 172;
 		this.shape4_8 = new ModelRenderer(this, 192, 132);

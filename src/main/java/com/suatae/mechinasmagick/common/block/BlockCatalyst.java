@@ -1,32 +1,31 @@
 package com.suatae.mechinasmagick.common.block;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.init.BlockBase;
-import com.suatae.mechinasmagick.common.tileentity.TileEntityAncientCase;
+import com.suatae.mechinasmagick.common.tileentity.TileEntityCatalyst;
 
 
 
 
 
-public class BlockAncientSeedCase extends BlockBase {
-	public BlockAncientSeedCase() {
+public class BlockCatalyst extends BlockBase implements ITileEntityProvider {
+
+	public BlockCatalyst() {
 		super(Material.rock);
-		this.setBlockName(REF.NAME.BLOCK.ASCASE);
-		this.setBlockTextureName(REF.NAME.BLOCK.ASCASE);
+		this.setBlockName(REF.NAME.BLOCK.CATALYST);
+		this.setBlockTextureName(REF.NAME.BLOCK.CATALYST);
 		this.setStepSound(Block.soundTypeStone);
-		this.setHardness(8.0f);
-		this.setLightOpacity(0);
-		this.setHarvestLevel("pickaxe", 1);
-		this.setBlockBounds(0.095F, 0F, 0.095F, 0.905F, 0.805F, 0.905F);
 	}
 
+	@Override
 	public TileEntity createNewTileEntity(World var1, int var2) {
-		return new TileEntityAncientCase();
+		return new TileEntityCatalyst();
 	}
 
 	@Override

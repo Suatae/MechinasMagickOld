@@ -7,17 +7,17 @@ import net.minecraftforge.client.IItemRenderer;
 
 import org.lwjgl.opengl.GL11;
 
-import com.suatae.mechinasmagick.common.tileentity.TileEntityAncientCase;
+import com.suatae.mechinasmagick.common.tileentity.TileEntityGoldCrop;
 
 
 
 
 
-public class IRAncientSeedCase implements IItemRenderer {
+public class IRGoldCrop implements IItemRenderer {
 	TileEntitySpecialRenderer	render;
 	private TileEntity			entity;
 
-	public IRAncientSeedCase(TileEntitySpecialRenderer render, TileEntityAncientCase tileEntity) {
+	public IRGoldCrop(TileEntitySpecialRenderer render, TileEntityGoldCrop tileEntity) {
 		this.entity = tileEntity;
 		this.render = render;
 	}
@@ -36,9 +36,7 @@ public class IRAncientSeedCase implements IItemRenderer {
 	@Override
 	public void renderItem(ItemRenderType type, ItemStack item, Object... data) {
 		if (type == IItemRenderer.ItemRenderType.ENTITY)
-			GL11.glPushMatrix();
-		GL11.glTranslatef(-0.5F, 0.0F, -0.5F);
+			GL11.glTranslatef(-0.5F, 0.0F, -0.5F);
 		this.render.renderTileEntityAt(this.entity, 0.0D, 0.0D, 0.0D, 0.0F);
-		GL11.glPopMatrix();
 	}
 }
