@@ -1,4 +1,4 @@
-package com.suatae.mechinasmagick.client.renders;
+package com.suatae.mechinasmagick.client.renders.ir.ironcasing;
 
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.item.ItemStack;
@@ -7,18 +7,17 @@ import net.minecraftforge.client.IItemRenderer;
 
 import org.lwjgl.opengl.GL11;
 
-import com.suatae.mechinasmagick.common.tileentity.TileEntityAncientContainer;
+import com.suatae.mechinasmagick.common.tileentity.ironcasing.TileEntityIronCasing;
 
 
 
 
 
-public class IRAncientSeedContainer implements IItemRenderer {
+public class IRIronCasing implements IItemRenderer {
 	TileEntitySpecialRenderer	render;
 	private TileEntity			entity;
 
-	public IRAncientSeedContainer(TileEntitySpecialRenderer render,
-			TileEntityAncientContainer tileEntity) {
+	public IRIronCasing(TileEntitySpecialRenderer render, TileEntityIronCasing tileEntity) {
 		this.entity = tileEntity;
 		this.render = render;
 	}

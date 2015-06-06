@@ -1,4 +1,4 @@
-package com.suatae.mechinasmagick.client.renders;
+package com.suatae.mechinasmagick.client.renders.ir;
 
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.item.ItemStack;
@@ -7,17 +7,17 @@ import net.minecraftforge.client.IItemRenderer;
 
 import org.lwjgl.opengl.GL11;
 
-import com.suatae.mechinasmagick.common.tileentity.TileEntityIronCrop;
+import com.suatae.mechinasmagick.common.tileentity.TileEntityGoldCrop;
 
 
 
 
 
-public class IRIronCrop implements IItemRenderer {
+public class IRGoldCrop implements IItemRenderer {
 	TileEntitySpecialRenderer	render;
 	private TileEntity			entity;
 
-	public IRIronCrop(TileEntitySpecialRenderer render, TileEntityIronCrop tileEntity) {
+	public IRGoldCrop(TileEntitySpecialRenderer render, TileEntityGoldCrop tileEntity) {
 		this.entity = tileEntity;
 		this.render = render;
 	}

@@ -17,4 +17,14 @@ public class CommonProxy {
 
 	}
 
+	public void registerTESRGoldCasing() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void registerTESRIronCasing() {
+		// TODO Auto-generated method stub
+
+	}
+
 }

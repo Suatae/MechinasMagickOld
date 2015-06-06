@@ -16,12 +16,8 @@ import com.suatae.mechinasmagick.common.item.MalletWood;
 import com.suatae.mechinasmagick.common.item.PlantFiber;
 import com.suatae.mechinasmagick.common.item.Seed;
 import com.suatae.mechinasmagick.common.item.goldseed.GoldAncientFruit;
-import com.suatae.mechinasmagick.common.item.goldseed.GoldSeedCured;
-import com.suatae.mechinasmagick.common.item.goldseed.GoldSeedEncased;
 import com.suatae.mechinasmagick.common.item.goldseed.GoldSeedPrimed;
 import com.suatae.mechinasmagick.common.item.ironseed.IronAncientFruit;
-import com.suatae.mechinasmagick.common.item.ironseed.IronSeedCured;
-import com.suatae.mechinasmagick.common.item.ironseed.IronSeedEncased;
 import com.suatae.mechinasmagick.common.item.ironseed.IronSeedPrimed;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -44,15 +40,11 @@ public class ItemReg {
 	public static final Item	itemMMSeed				= new Seed();
 
 	// Gold Seed
-	public static final Item	itemCuredGold			= new GoldSeedCured();
-	public static final Item	itemEncasedGold			= new GoldSeedEncased();
 	public static final Item	itemPrimedGold			= new GoldSeedPrimed();
 	public static final Item	itemAncientFruitGold	= new GoldAncientFruit();
 
 	// Iron Seed
 
-	public static final Item	itemCuredIron			= new IronSeedCured();
-	public static final Item	itemEncasedIron			= new IronSeedEncased();
 	public static final Item	itemPrimedIron			= new IronSeedPrimed();
 	public static final Item	itemAncientFruitIron	= new IronAncientFruit();
 
@@ -77,14 +69,10 @@ public class ItemReg {
 		GameRegistry.registerItem(itemMMSeed, "itemSeed");
 
 		// Gold Seed
-		GameRegistry.registerItem(itemCuredGold, "itemSeedCuredGold");
-		GameRegistry.registerItem(itemEncasedGold, "itemSeedEncasedGold");
 		GameRegistry.registerItem(itemPrimedGold, "itemSeedPrimedGold");
 		GameRegistry.registerItem(itemAncientFruitGold, "fruitAncientGold");
 
 		// Iron Seed
-		GameRegistry.registerItem(itemCuredIron, "itemSeedCuredIron");
-		GameRegistry.registerItem(itemEncasedIron, "itemSeedEncasedIron");
 		GameRegistry.registerItem(itemPrimedIron, "itemSeedPrimedIron");
 		GameRegistry.registerItem(itemAncientFruitIron, "fruitAncientIron");
 

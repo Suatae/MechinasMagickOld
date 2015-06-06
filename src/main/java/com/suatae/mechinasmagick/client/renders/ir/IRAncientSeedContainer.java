@@ -1,4 +1,4 @@
-package com.suatae.mechinasmagick.client.renders;
+package com.suatae.mechinasmagick.client.renders.ir;
 
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.item.ItemStack;
@@ -7,17 +7,18 @@ import net.minecraftforge.client.IItemRenderer;
 
 import org.lwjgl.opengl.GL11;
 
-import com.suatae.mechinasmagick.common.tileentity.TileEntityCatalyst;
+import com.suatae.mechinasmagick.common.tileentity.TileEntityAncientContainer;
 
 
 
 
 
-public class IRCatalyst implements IItemRenderer {
+public class IRAncientSeedContainer implements IItemRenderer {
 	TileEntitySpecialRenderer	render;
 	private TileEntity			entity;
 
-	public IRCatalyst(TileEntitySpecialRenderer render, TileEntityCatalyst tileEntity) {
+	public IRAncientSeedContainer(TileEntitySpecialRenderer render,
+			TileEntityAncientContainer tileEntity) {
 		this.entity = tileEntity;
 		this.render = render;
 	}

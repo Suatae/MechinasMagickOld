@@ -1,4 +1,4 @@
-package com.suatae.mechinasmagick.client.renders;
+package com.suatae.mechinasmagick.client.renders.ir.goldcasing;
 
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.item.ItemStack;
@@ -7,24 +7,24 @@ import net.minecraftforge.client.IItemRenderer;
 
 import org.lwjgl.opengl.GL11;
 
-import com.suatae.mechinasmagick.common.tileentity.TileEntityGoldCrop;
+import com.suatae.mechinasmagick.common.tileentity.goldcasing.TileEntityGoldCasing;
 
 
 
 
 
-public class IRGoldCrop implements IItemRenderer {
+public class IRGoldCasing implements IItemRenderer {
 	TileEntitySpecialRenderer	render;
 	private TileEntity			entity;
 
-	public IRGoldCrop(TileEntitySpecialRenderer render, TileEntityGoldCrop tileEntity) {
+	public IRGoldCasing(TileEntitySpecialRenderer render, TileEntityGoldCasing tileEntity) {
 		this.entity = tileEntity;
 		this.render = render;
 	}
 
 	@Override
 	public boolean handleRenderType(ItemStack item, ItemRenderType type) {
-		return true;
+		return false;
 	}
 
 	@Override
@@ -39,4 +39,5 @@ public class IRGoldCrop implements IItemRenderer {
 			GL11.glTranslatef(-0.5F, 0.0F, -0.5F);
 		this.render.renderTileEntityAt(this.entity, 0.0D, 0.0D, 0.0D, 0.0F);
 	}
+
 }

@@ -132,6 +132,12 @@ public class REF {
 			public final static String	MSTONEBRICK		= "blockStoneBrick";
 			public final static String	MiSTONEBRICK	= "MechinasMagick:StoneBrick";
 			public final static String	CATALYST		= "blockCatalyst";
+			public final static String	GCasing			= "blockGoldCasing";
+			public final static String	GSCasing		= "blockGoldCasingSeeded";
+			public final static String	GFCasing		= "blockGoldCasingFinal";
+			public final static String	ICasing			= "blockIronCasing";
+			public final static String	ISCasing		= "blockIronCasingSeeded";
+			public final static String	IFCasing		= "blockIronCasingFinal";
 
 		}
 

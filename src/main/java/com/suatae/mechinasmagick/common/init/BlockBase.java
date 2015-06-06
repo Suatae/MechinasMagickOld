@@ -2,7 +2,9 @@ package com.suatae.mechinasmagick.common.init;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.particle.EffectRenderer;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.world.World;
 
 import com.suatae.mechinasmagick.client.creativetab.MechinasTabs;
 import com.suatae.mechinasmagick.common.core.lib.REF;
@@ -53,5 +55,12 @@ public class BlockBase extends Block {
 	// public boolean renderAsNormalBlock() {
 	// return false;
 	// }
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public boolean addDestroyEffects(World world, int x, int y, int z, int meta,
+			EffectRenderer effectRenderer) {
+		return true;
+	}
 
 }

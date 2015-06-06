@@ -1,4 +1,4 @@
-package com.suatae.mechinasmagick.client.renders;
+package com.suatae.mechinasmagick.client.renders.ir;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
@@ -8,20 +8,20 @@ import net.minecraftforge.client.IItemRenderer;
 
 import org.lwjgl.opengl.GL11;
 
-import com.suatae.mechinasmagick.client.models.IronSteelMallet;
+import com.suatae.mechinasmagick.client.models.StoneMallet;
 import com.suatae.mechinasmagick.common.core.lib.REF;
 
 
 
 
 
-public class IRToolIronSteelMallet implements IItemRenderer {
-	protected IronSteelMallet	model;
+public class IRToolStoneMallet implements IItemRenderer {
+	protected StoneMallet	model;
 
-	public IRToolIronSteelMallet() {
-		model = new IronSteelMallet();
+	public IRToolStoneMallet() {
+		model = new StoneMallet();
 		this.MalletTexture = new ResourceLocation(REF.MOD_ID.toLowerCase(),
-				"textures/models/copperMallet.png");
+				"textures/models/stoneMallet.png");
 	}
 
 	private ResourceLocation	MalletTexture;

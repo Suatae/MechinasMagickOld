@@ -1,12 +1,12 @@
 package com.suatae.mechinasmagick.common.item;
 
-import java.util.List;
-
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.world.World;
 
 import com.suatae.mechinasmagick.common.core.lib.REF;
+import com.suatae.mechinasmagick.common.init.BlockReg;
 import com.suatae.mechinasmagick.common.init.ItemBase;
 
 
@@ -21,8 +21,27 @@ public class Seed extends ItemBase {
 	}
 
 	@Override
-	public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
-		list.add(EnumChatFormatting.DARK_GRAY + "-Base Seed");
+	public boolean onItemUse(ItemStack itemstack, EntityPlayer Player, World world, int X, int Y,
+			int Z, int par7, float par8, float par9, float par10) {
+		if (par7 != 1) {
+			return false;
+		}
+		else
+			if (Player.canPlayerEdit(X, Y, Z, par7, itemstack)) {
 
+				Block block = world.getBlock(X, Y, Z);
+
+				if (!(block != BlockReg.blockGoldCasing)) {
+					world.setBlock(X, Y, Z, BlockReg.blockGoldCasingSeeded);
+					Player.inventory.consumeInventoryItem(this);
+				}
+
+				if (!(block != BlockReg.blockIronCasing)) {
+					world.setBlock(X, Y, Z, BlockReg.blockIronCasingSeeded);
+					Player.inventory.consumeInventoryItem(this);
+				}
+				return true;
+			}
+		return false;
 	}
 }

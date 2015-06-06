@@ -7,10 +7,12 @@ import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
+import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
 import com.suatae.mechinasmagick.common.core.lib.REF;
@@ -145,4 +147,9 @@ public class BlockGoldAncient extends CropBase implements ITileEntityProvider {
 		iIcon[9] = parIIconRegister.registerIcon(REF.NAME.BLOCK.GOLD04);
 	}
 
+	@Override
+	public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z,
+			EntityPlayer player) {
+		return null;
+	}
 }
