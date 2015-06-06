@@ -6,6 +6,9 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -61,5 +64,11 @@ public class BlockAncientSteppingStone extends BlockBase {
 	@Override
 	public boolean canPlaceTorchOnTop(World world, int x, int y, int z) {
 		return false;
+	}
+
+	@Override
+	public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z,
+			EntityPlayer player) {
+		return null;
 	}
 }

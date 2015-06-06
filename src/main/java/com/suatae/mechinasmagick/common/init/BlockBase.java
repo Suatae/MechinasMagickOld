@@ -6,7 +6,6 @@ import net.minecraft.client.particle.EffectRenderer;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.world.World;
 
-import com.suatae.mechinasmagick.client.creativetab.MechinasTabs;
 import com.suatae.mechinasmagick.common.core.lib.REF;
 
 import cpw.mods.fml.relauncher.Side;
@@ -19,7 +18,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class BlockBase extends Block {
 	public BlockBase(Material mat) {
 		super(mat);
-		this.setCreativeTab(MechinasTabs.MechinasMagick_TAB);
 	}
 
 	@Override

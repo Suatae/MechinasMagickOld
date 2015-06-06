@@ -30,7 +30,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class BlockIronAncient extends CropBase implements ITileEntityProvider {
 
 	public BlockIronAncient() {
-		super(Material.web);
+		super(Material.rock);
 		this.setBlockName(REF.NAME.BLOCK.IRON);
 		this.setBlockTextureName(REF.NAME.BLOCK.IRON00);
 		this.setLightLevel(1.0F);

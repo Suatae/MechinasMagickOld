@@ -6,6 +6,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
+import com.suatae.mechinasmagick.client.creativetab.MechinasTabs;
 import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.init.BlockBase;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityCatalyst;
@@ -23,6 +24,7 @@ public class BlockCatalyst extends BlockBase implements ITileEntityProvider {
 		this.setStepSound(Block.soundTypeStone);
 		this.setHardness(1.5F);
 		this.setResistance(10.0F);
+		this.setCreativeTab(MechinasTabs.MechinasMagick_TAB);
 	}
 
 	@Override

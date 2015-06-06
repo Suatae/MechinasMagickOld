@@ -26,7 +26,6 @@ public class CropBase extends BlockBush implements IGrowable {
 
 		super(mat);
 		this.setTickRandomly(true);
-		this.setCreativeTab(null);
 		this.setHardness(0.0F);
 		this.setStepSound(soundTypeGrass);
 		this.disableStats();

@@ -5,8 +5,10 @@ import java.util.ArrayList;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
 import com.suatae.mechinasmagick.common.core.lib.REF;
@@ -62,6 +64,12 @@ public class BlockAncientSeedContainer extends BlockBase implements ITileEntityP
 		ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
 		drops.add(new ItemStack(ItemReg.itemMMSeed));
 		return drops;
+	}
+
+	@Override
+	public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z,
+			EntityPlayer player) {
+		return null;
 	}
 
 }

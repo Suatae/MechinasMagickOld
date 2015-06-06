@@ -7,11 +7,12 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
-import com.suatae.mechinasmagick.client.creativetab.MechinasTabs;
 import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.init.BlockBase;
 import com.suatae.mechinasmagick.common.init.ItemReg;
@@ -28,7 +29,6 @@ public class BlockGoldCasingFinal extends BlockBase implements ITileEntityProvid
 		this.setBlockName(REF.NAME.BLOCK.GFCasing);
 		this.setBlockTextureName(REF.NAME.BLOCK.GFCasing);
 		this.setStepSound(Block.soundTypeStone);
-		this.setCreativeTab(MechinasTabs.MechinasMagick_TAB);
 		this.setBlockBounds(0.35F, 0.05F, 0.35F, 0.65F, 0.60F, 0.65F);
 		this.setBlockUnbreakable();
 	}
@@ -53,13 +53,6 @@ public class BlockGoldCasingFinal extends BlockBase implements ITileEntityProvid
 		return false;
 	}
 
-	// @Override
-	// public ItemStack getPickBlock(MovingObjectPosition target, World world,
-	// int x, int y, int z,
-	// EntityPlayer player) {
-	// return null;
-	// }
-
 	@Override
 	public void onBlockClicked(World world, int X, int Y, int Z, EntityPlayer Player) {
 		Item star = Items.nether_star;
@@ -71,5 +64,11 @@ public class BlockGoldCasingFinal extends BlockBase implements ITileEntityProvid
 			world.createExplosion(Player, X, Y, Z, 1f, true);
 			Player.addPotionEffect(new PotionEffect(15, 20 * 20, 2));
 		}
+	}
+
+	@Override
+	public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z,
+			EntityPlayer player) {
+		return null;
 	}
 }

@@ -6,9 +6,13 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 
+import com.suatae.mechinasmagick.client.creativetab.MechinasTabs;
 import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.init.BlockBase;
 
@@ -30,6 +34,7 @@ public class BlockLavaStone extends BlockBase {
 		this.setHarvestLevel("pickaxe", 0);
 		this.setResistance(2000.0F);
 		this.setTickRandomly(true);
+		this.setCreativeTab(MechinasTabs.MechinasMagick_TAB);
 	}
 
 	public boolean enableStats() {
@@ -74,5 +79,11 @@ public class BlockLavaStone extends BlockBase {
 	@Override
 	public boolean canPlaceTorchOnTop(World world, int x, int y, int z) {
 		return false;
+	}
+
+	@Override
+	public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z,
+			EntityPlayer player) {
+		return null;
 	}
 }
