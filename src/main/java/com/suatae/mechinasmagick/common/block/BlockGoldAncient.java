@@ -34,6 +34,8 @@ public class BlockGoldAncient extends CropBase implements ITileEntityProvider {
 		this.setBlockName(REF.NAME.BLOCK.GOLD);
 		this.setBlockTextureName(REF.NAME.BLOCK.GOLD00);
 		this.setLightLevel(1.0F);
+		this.setHardness(1.5F);
+		this.setResistance(10.0F);
 		this.setBlockBounds(0.35F, 0.05F, 0.35F, 0.65F, 0.60F, 0.65F);
 
 	}

@@ -21,6 +21,8 @@ public class BlockCatalyst extends BlockBase implements ITileEntityProvider {
 		this.setBlockName(REF.NAME.BLOCK.CATALYST);
 		this.setBlockTextureName(REF.NAME.BLOCK.CATALYST);
 		this.setStepSound(Block.soundTypeStone);
+		this.setHardness(1.5F);
+		this.setResistance(10.0F);
 	}
 
 	@Override

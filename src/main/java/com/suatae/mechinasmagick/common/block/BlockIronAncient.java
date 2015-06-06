@@ -34,6 +34,8 @@ public class BlockIronAncient extends CropBase implements ITileEntityProvider {
 		this.setBlockName(REF.NAME.BLOCK.IRON);
 		this.setBlockTextureName(REF.NAME.BLOCK.IRON00);
 		this.setLightLevel(1.0F);
+		this.setHardness(1.5F);
+		this.setResistance(10.0F);
 		this.setBlockBounds(0.35F, 0.40F, 0.35F, 0.65F, 0.95F, 0.65F);
 	}
 

@@ -34,6 +34,8 @@ public class BlockStoneBrick extends Block {
 		this.setBlockName(name);
 		this.setStepSound(Block.soundTypeStone);
 		this.setCreativeTab(MechinasTabs.MechinasMagick_TAB);
+		this.setHardness(1.5F);
+		this.setResistance(10.0F);
 	}
 
 	@Override

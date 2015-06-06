@@ -25,7 +25,8 @@ public class BlockAncientSeedContainer extends BlockBase implements ITileEntityP
 		this.setBlockTextureName(REF.NAME.BLOCK.ASContainer);
 		this.setStepSound(Block.soundTypeStone);
 		this.setLightLevel(0.6375F);
-		this.setHardness(8.0f);
+		this.setHardness(1.5F);
+		this.setResistance(10.0F);
 		this.setLightOpacity(0);
 		this.setHarvestLevel("pickaxe", 1);
 		this.setBlockBounds(0.095F, 0F, 0.095F, 0.905F, 0.805F, 0.905F);
