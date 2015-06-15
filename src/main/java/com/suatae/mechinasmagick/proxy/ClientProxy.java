@@ -5,6 +5,7 @@ import net.minecraft.item.Item;
 import net.minecraftforge.client.MinecraftForgeClient;
 
 import com.suatae.mechinasmagick.client.renders.TESRAncientSeedContainer;
+import com.suatae.mechinasmagick.client.renders.TESRBlockCache;
 import com.suatae.mechinasmagick.client.renders.TESRBranch;
 import com.suatae.mechinasmagick.client.renders.TESRCatalyst;
 import com.suatae.mechinasmagick.client.renders.TESRGoldCasing;
@@ -31,6 +32,10 @@ import com.suatae.mechinasmagick.common.tileentity.TileEntityBranch;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityCatalyst;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityGoldCrop;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityIronCrop;
+import com.suatae.mechinasmagick.common.tileentity.cache.TileEntityCacheCommon;
+import com.suatae.mechinasmagick.common.tileentity.cache.TileEntityCacheElite;
+import com.suatae.mechinasmagick.common.tileentity.cache.TileEntityCacheRare;
+import com.suatae.mechinasmagick.common.tileentity.cache.TileEntityCacheUncommon;
 import com.suatae.mechinasmagick.common.tileentity.flint.TileEntityFlint01;
 import com.suatae.mechinasmagick.common.tileentity.flint.TileEntityFlint02;
 import com.suatae.mechinasmagick.common.tileentity.flint.TileEntityFlint03;
@@ -65,6 +70,10 @@ public class ClientProxy extends CommonProxy {
 	TileEntitySpecialRenderer	r12	= new TESRBlockFlint02();
 	TileEntitySpecialRenderer	r13	= new TESRBlockFlint03();
 	TileEntitySpecialRenderer	r14	= new TESRBlockFlint04();
+	TileEntitySpecialRenderer	r15	= new TESRBlockCache();
+	TileEntitySpecialRenderer	r16	= new TESRBlockCache();
+	TileEntitySpecialRenderer	r17	= new TESRBlockCache();
+	TileEntitySpecialRenderer	r18	= new TESRBlockCache();
 
 	@Override
 	public void registerItemRender() {
@@ -100,6 +109,11 @@ public class ClientProxy extends CommonProxy {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityFlint02.class, r12);
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityFlint03.class, r13);
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityFlint04.class, r14);
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCacheCommon.class, r15);
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCacheUncommon.class, r16);
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCacheRare.class, r17);
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCacheElite.class, r18);
 	}
 
 	@Override

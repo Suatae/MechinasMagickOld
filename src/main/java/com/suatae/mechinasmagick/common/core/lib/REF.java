@@ -2,6 +2,8 @@ package com.suatae.mechinasmagick.common.core.lib;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 
 import com.suatae.mechinasmagick.common.init.BlockReg;
 
@@ -12,13 +14,56 @@ import com.suatae.mechinasmagick.common.init.BlockReg;
 public class REF {
 	public static final String	MOD_ID				= "MechinasMagick";
 	public static final String	MOD_NAME			= "Mechinas Magick";
-	public static final String	VERSION				= "1.7.10-1.16";
+	public static final String	VERSION				= "1.7.10-1.17";
 	public static final String	CLIENTSIDE			= "com.suatae.mechinasmagick.proxy.ClientProxy";
 	public static final String	COMMONSIDE			= "com.suatae.mechinasmagick.proxy.CommonProxy";
 	public static final String	GUI_FACTORY_CLASS	= "com.suatae.mechinasmagick.client.gui.NBGuiFactory";
 
 	// Config Types
 	public static String		DEBUG				= "DEV MODE";
+
+	public static class CACHEDROP {
+		public static class LVL01 {
+			public static final Item	D01	= Items.bone;
+			public static final Item	D02	= Items.string;
+			public static final Item	D03	= Items.cookie;
+			public static final Item	D04	= Items.reeds;
+			public static final Item	D05	= Items.carrot;
+			public static final Item	D06	= Items.baked_potato;
+			public static final Item	D07	= Items.poisonous_potato;
+			public static final Item	D08	= Items.rotten_flesh;
+			public static final Item	D09	= Items.melon_seeds;
+			public static final Item	D10	= Items.pumpkin_seeds;
+		}
+
+		public static class LVL02 {
+			public static final Item	D01	= Items.map;
+			public static final Item	D02	= Items.ender_pearl;
+			public static final Item	D03	= Items.blaze_rod;
+			public static final Item	D04	= Items.leather;
+			public static final Item	D05	= Items.glowstone_dust;
+			public static final Item	D06	= Items.iron_ingot;
+			public static final Item	D07	= Items.iron_horse_armor;
+		}
+
+		public static class LVL03 {
+			public static final Item	D01	= Items.diamond;
+			public static final Item	D02	= Items.lead;
+			public static final Item	D03	= Items.golden_apple;
+			public static final Item	D04	= Items.nether_wart;
+			public static final Item	D05	= Items.golden_horse_armor;
+		}
+
+		public static class LVL04 {
+			public static final Item	D01	= Items.ghast_tear;
+			public static final Item	D02	= Items.redstone;
+			public static final Item	D03	= Items.diamond_horse_armor;
+		}
+
+		public static class LVL05 {
+			public static final Item	D01	= Items.nether_star;
+		}
+	}
 
 	public static class BLOCK {
 		public final static Block	stone	= Blocks.stonebrick;
@@ -147,6 +192,11 @@ public class REF {
 			public final static String	ICasing			= "blockIronCasing";
 			public final static String	ISCasing		= "blockIronCasingSeeded";
 			public final static String	IFCasing		= "blockIronCasingFinal";
+
+			public static final String	C_NAME_C		= "blockCacheC";
+			public static final String	C_NAME_U		= "blockCacheU";
+			public static final String	C_NAME_R		= "blockCacheR";
+			public static final String	C_NAME_E		= "blockCacheE";
 
 			// Misc
 			public final static String	BRANCH			= "blockBranch";

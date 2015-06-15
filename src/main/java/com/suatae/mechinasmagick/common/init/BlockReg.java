@@ -19,6 +19,10 @@ import com.suatae.mechinasmagick.common.block.blank.BlankNS;
 import com.suatae.mechinasmagick.common.block.blank.BlankNW;
 import com.suatae.mechinasmagick.common.block.blank.BlankSE;
 import com.suatae.mechinasmagick.common.block.blank.BlankSW;
+import com.suatae.mechinasmagick.common.block.cache.BlockCacheC;
+import com.suatae.mechinasmagick.common.block.cache.BlockCacheE;
+import com.suatae.mechinasmagick.common.block.cache.BlockCacheR;
+import com.suatae.mechinasmagick.common.block.cache.BlockCacheU;
 import com.suatae.mechinasmagick.common.block.flint.BlockFlint01;
 import com.suatae.mechinasmagick.common.block.flint.BlockFlint02;
 import com.suatae.mechinasmagick.common.block.flint.BlockFlint03;
@@ -35,6 +39,10 @@ import com.suatae.mechinasmagick.common.tileentity.TileEntityBranch;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityCatalyst;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityGoldCrop;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityIronCrop;
+import com.suatae.mechinasmagick.common.tileentity.cache.TileEntityCacheCommon;
+import com.suatae.mechinasmagick.common.tileentity.cache.TileEntityCacheElite;
+import com.suatae.mechinasmagick.common.tileentity.cache.TileEntityCacheRare;
+import com.suatae.mechinasmagick.common.tileentity.cache.TileEntityCacheUncommon;
 import com.suatae.mechinasmagick.common.tileentity.flint.TileEntityFlint01;
 import com.suatae.mechinasmagick.common.tileentity.flint.TileEntityFlint02;
 import com.suatae.mechinasmagick.common.tileentity.flint.TileEntityFlint03;
@@ -85,6 +93,11 @@ public class BlockReg {
 	public static final Block	SW						= new BlankSW();
 	public static final Block	NW						= new BlankNW();
 
+	public static final Block	blockCacheC				= new BlockCacheC();
+	public static final Block	blockCacheU				= new BlockCacheU();
+	public static final Block	blockCacheR				= new BlockCacheR();
+	public static final Block	blockCacheE				= new BlockCacheE();
+
 	public static void init() {
 		GameRegistry.registerBlock(blockAncientGold, "blockGoldAncient");
 		GameRegistry.registerBlock(blockAncientIron, "blockIronAncient");
@@ -112,6 +125,11 @@ public class BlockReg {
 		GameRegistry.registerBlock(SW, "SW");
 		GameRegistry.registerBlock(NW, "NW");
 
+		GameRegistry.registerBlock(blockCacheC, "blockCacheC");
+		GameRegistry.registerBlock(blockCacheU, "blockCacheU");
+		GameRegistry.registerBlock(blockCacheR, "blockCacheR");
+		GameRegistry.registerBlock(blockCacheE, "blockCacheE");
+
 		GameRegistry.registerTileEntity(TileEntityAncientContainer.class,
 				"TileEntityAncientContainer");
 		GameRegistry.registerTileEntity(TileEntityCatalyst.class, "TileEntityCatalyst");
@@ -132,6 +150,11 @@ public class BlockReg {
 		GameRegistry.registerTileEntity(TileEntityFlint02.class, "TileEntityFlint02");
 		GameRegistry.registerTileEntity(TileEntityFlint03.class, "TileEntityFlint03");
 		GameRegistry.registerTileEntity(TileEntityFlint04.class, "TileEntityFlint04");
+
+		GameRegistry.registerTileEntity(TileEntityCacheCommon.class, "TileEntityCacheCommon");
+		GameRegistry.registerTileEntity(TileEntityCacheUncommon.class, "TileEntityCacheUncommon");
+		GameRegistry.registerTileEntity(TileEntityCacheRare.class, "TileEntityCacheRare");
+		GameRegistry.registerTileEntity(TileEntityCacheElite.class, "TileEntityCacheElite");
 
 		GameRegistry.registerBlock(blockStoneBrick, ItemBlockStoneBrick.class, "blockStoneBrick");
 
