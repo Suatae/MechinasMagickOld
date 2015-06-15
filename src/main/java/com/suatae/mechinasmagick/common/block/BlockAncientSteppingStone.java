@@ -40,11 +40,17 @@ public class BlockAncientSteppingStone extends BlockBase {
 	}
 
 	@Override
+	public int quantityDropped(Random random) {
+		return 0;
+	}
+
+	@Override
 	public void onNeighborBlockChange(World world, int X, int Y, int Z, Block block) {
 
 		for (ForgeDirection d : ForgeDirection.VALID_DIRECTIONS) {
 			Block lava = world.getBlock(X + d.offsetX, Y + d.offsetY, Z + d.offsetZ);
 			if (!(lava != REF.BLOCK.lava)) {
+				world.func_147480_a(X, Y, Z, false);
 				world.setBlock(X, Y, Z, REF.BLOCK.lava);
 			}
 		}
@@ -53,6 +59,7 @@ public class BlockAncientSteppingStone extends BlockBase {
 
 	@Override
 	public void onEntityWalking(World world, int X, int Y, int Z, Entity entity) {
+		world.func_147480_a(X, Y, Z, false);
 		world.setBlock(X, Y, Z, REF.BLOCK.lava);
 	}
 

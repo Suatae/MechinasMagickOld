@@ -38,7 +38,7 @@ public class BlockLavaStone extends BlockBase {
 	}
 
 	public boolean enableStats() {
-		return true;
+		return false;
 	}
 
 	/*

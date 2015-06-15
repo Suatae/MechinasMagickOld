@@ -43,8 +43,9 @@ public class MalletWood extends ToolMalletBase {
 				Block block = world.getBlock(X, Y, Z);
 
 				if (!(block != REF.BLOCK.lavaS)) {
+					world.func_147480_a(X, Y, Z, false);
 					world.setBlock(X, Y, Z, REF.BLOCK.lava);
-					world.createExplosion(Player, X, Y, Z, 5f, false);
+					world.createExplosion(Player, X, Y, Z, 2f, false);
 					itemstack.attemptDamageItem(par7, null);
 					if (itemstack.getItemDamage() <= ToolMalletBase.Wooddurability) {
 						world.playSoundEffect(X, Y, Z, REF.SOUND.MALLETHIT, 0.5F, 1.0F);
@@ -55,15 +56,15 @@ public class MalletWood extends ToolMalletBase {
 				Block Gold = world.getBlock(X, Y, Z);
 				Block GoldN = world.getBlock(X, Y, Z + 1);
 				Block GoldS = world.getBlock(X, Y, Z - 1);
-				Block GoldE = world.getBlock(X - 1, Y, Z);
+				Block GoldE = world.getBlock(X + 1, Y, Z);
 				Block GoldW = world.getBlock(X - 1, Y, Z);
 				if (!(Gold != Blocks.gold_block) && !(GoldN != Blocks.gold_block)
 						&& !(GoldS != Blocks.gold_block) && !(GoldE != Blocks.gold_block)
 						&& !(GoldW != Blocks.gold_block)) {
-					world.setBlock(X, Y, Z + 1, Blocks.air);
-					world.setBlock(X, Y, Z - 1, Blocks.air);
-					world.setBlock(X - 1, Y, Z, Blocks.air);
-					world.setBlock(X + 1, Y, Z, Blocks.air);
+					world.func_147480_a(X, Y, Z + 1, false);
+					world.func_147480_a(X, Y, Z - 1, false);
+					world.func_147480_a(X + 1, Y, Z, false);
+					world.func_147480_a(X - 1, Y, Z, false);
 					world.setBlock(X, Y, Z, BlockReg.blockGoldCasing);
 					world.createExplosion(Player, X, Y, Z, 5f, false);
 					itemstack.attemptDamageItem(par7, null);
@@ -78,15 +79,15 @@ public class MalletWood extends ToolMalletBase {
 				Block Iron = world.getBlock(X, Y, Z);
 				Block IronN = world.getBlock(X, Y, Z + 1);
 				Block IronS = world.getBlock(X, Y, Z - 1);
-				Block IronE = world.getBlock(X - 1, Y, Z);
+				Block IronE = world.getBlock(X + 1, Y, Z);
 				Block IronW = world.getBlock(X - 1, Y, Z);
 				if (!(Iron != Blocks.iron_block) && !(IronN != Blocks.iron_block)
 						&& !(IronS != Blocks.iron_block) && !(IronE != Blocks.iron_block)
 						&& !(IronW != Blocks.iron_block)) {
-					world.setBlock(X, Y, Z + 1, Blocks.air);
-					world.setBlock(X, Y, Z - 1, Blocks.air);
-					world.setBlock(X - 1, Y, Z, Blocks.air);
-					world.setBlock(X + 1, Y, Z, Blocks.air);
+					world.func_147480_a(X, Y, Z + 1, false);
+					world.func_147480_a(X, Y, Z - 1, false);
+					world.func_147480_a(X + 1, Y, Z, false);
+					world.func_147480_a(X - 1, Y, Z, false);
 					world.setBlock(X, Y, Z, BlockReg.blockIronCasing);
 					world.createExplosion(Player, X, Y, Z, 5f, false);
 					itemstack.attemptDamageItem(par7, null);
@@ -100,15 +101,15 @@ public class MalletWood extends ToolMalletBase {
 				Block gcasing = world.getBlock(X, Y, Z);
 				Block fire1 = world.getBlock(X, Y, Z + 1);
 				Block fire2 = world.getBlock(X, Y, Z - 1);
-				Block fire3 = world.getBlock(X - 1, Y, Z);
+				Block fire3 = world.getBlock(X + 1, Y, Z);
 				Block fire4 = world.getBlock(X - 1, Y, Z);
 				if (!(gcasing != BlockReg.blockGoldCasingSeeded) && !(fire1 != Blocks.fire)
 						&& !(fire2 != Blocks.fire) && !(fire3 != Blocks.fire)
 						&& !(fire4 != Blocks.fire)) {
-					world.setBlock(X, Y, Z + 1, Blocks.air);
-					world.setBlock(X, Y, Z - 1, Blocks.air);
-					world.setBlock(X - 1, Y, Z, Blocks.air);
-					world.setBlock(X + 1, Y, Z, Blocks.air);
+					world.func_147480_a(X, Y, Z + 1, false);
+					world.func_147480_a(X, Y, Z - 1, false);
+					world.func_147480_a(X + 1, Y, Z, false);
+					world.func_147480_a(X - 1, Y, Z, false);
 					world.setBlock(X, Y, Z, BlockReg.blockGoldCasingFinal);
 					itemstack.attemptDamageItem(par7, null);
 					world.createExplosion(Player, X, Y, Z, 5f, false);
