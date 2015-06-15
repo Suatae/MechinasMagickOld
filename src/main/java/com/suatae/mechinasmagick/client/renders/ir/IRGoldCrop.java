@@ -7,8 +7,6 @@ import net.minecraftforge.client.IItemRenderer;
 
 import org.lwjgl.opengl.GL11;
 
-import com.suatae.mechinasmagick.common.tileentity.TileEntityGoldCrop;
-
 
 
 
@@ -17,7 +15,7 @@ public class IRGoldCrop implements IItemRenderer {
 	TileEntitySpecialRenderer	render;
 	private TileEntity			entity;
 
-	public IRGoldCrop(TileEntitySpecialRenderer render, TileEntityGoldCrop tileEntity) {
+	public IRGoldCrop(TileEntitySpecialRenderer render, TileEntity tileEntity) {
 		this.entity = tileEntity;
 		this.render = render;
 	}

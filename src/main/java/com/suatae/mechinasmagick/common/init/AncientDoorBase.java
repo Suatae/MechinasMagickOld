@@ -1,4 +1,6 @@
-package com.suatae.mechinasmagick.common.block;
+package com.suatae.mechinasmagick.common.init;
+
+import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -7,21 +9,15 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
-import net.minecraftforge.common.util.ForgeDirection;
-
-import com.suatae.mechinasmagick.common.core.lib.REF;
-import com.suatae.mechinasmagick.common.init.BlockBase;
 
 
 
 
 
-public class BlockAncientDoor extends BlockBase {
+public class AncientDoorBase extends BlockBase {
 
-	public BlockAncientDoor() {
+	public AncientDoorBase() {
 		super(Material.rock);
-		this.setBlockName(REF.NAME.BLOCK.ADOOR);
-		this.setBlockTextureName(REF.NAME.BLOCK.ADOOR);
 		this.setStepSound(Block.soundTypeStone);
 		this.setBlockUnbreakable();
 		this.setTickRandomly(true);
@@ -49,20 +45,25 @@ public class BlockAncientDoor extends BlockBase {
 	}
 
 	@Override
+	public int quantityDropped(Random random) {
+		return 0;
+	}
+
+	@Override
+	protected boolean canSilkHarvest() {
+		return false;
+	}
+
+	@Override
 	public void onBlockClicked(World world, int X, int Y, int Z, EntityPlayer Player) {
-		world.setBlock(X, Y, Z, REF.BLOCK.air);
+		world.func_147480_a(X, Y, Z, true);
 	};
 
 	@Override
-	public void onNeighborBlockChange(World world, int X, int Y, int Z, Block block) {
-
-		for (ForgeDirection d : ForgeDirection.VALID_DIRECTIONS) {
-			Block lava = world.getBlock(X, Y + d.offsetY, Z);
-			if (!(lava != REF.BLOCK.air)) {
-				world.setBlock(X, Y, Z, REF.BLOCK.air);
-			}
-		}
-	};
+	public boolean onBlockActivated(World world, int X, int Y, int Z, EntityPlayer player,
+			int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_) {
+		return world.func_147480_a(X, Y, Z, true);
+	}
 
 	@Override
 	public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z,

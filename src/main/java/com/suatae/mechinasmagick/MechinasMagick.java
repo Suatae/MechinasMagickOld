@@ -26,13 +26,17 @@ public class MechinasMagick {
 	@Mod.Instance(REF.MOD_ID)
 	public static MechinasMagick	instance;
 
-	@SidedProxy(clientSide = REF.CLIENTSIDE, serverSide = REF.SERVERSIDE)
+	@SidedProxy(clientSide = REF.CLIENTSIDE, serverSide = REF.COMMONSIDE)
 	public static CommonProxy		proxy;
 	public static EventHandler		event;
 
 	@Mod.EventHandler
 	public static void PreLoad(FMLPreInitializationEvent event) {
-		proxy.preInit();
+
+		proxy.registerItemRender();
+		proxy.registerTESRender();
+		proxy.registerTESRGoldCasing();
+		proxy.registerTESRIronCasing();
 		GenHandler.preInit();
 		EventHandler.preInit(event);
 
@@ -48,7 +52,6 @@ public class MechinasMagick {
 
 		BlockReg.init();
 		ItemReg.init();
-		proxy.Init();
 		GenHandler.Init();
 		EventHandler.Init(event);
 		RecipeRemover.voidRecipe();
@@ -68,7 +71,6 @@ public class MechinasMagick {
 			LogHelper.info("[Post-Initialization]: --- Loaded---");
 		}
 		else {}
-		proxy.postInit();
 		GenHandler.postInit();
 		EventHandler.postInit(event);
 

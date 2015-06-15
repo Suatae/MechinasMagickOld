@@ -23,25 +23,23 @@ public class Seed extends ItemBase {
 	@Override
 	public boolean onItemUse(ItemStack itemstack, EntityPlayer Player, World world, int X, int Y,
 			int Z, int par7, float par8, float par9, float par10) {
-		if (par7 != 1) {
-			return false;
+
+		if (Player.canPlayerEdit(X, Y, Z, par7, itemstack)) {
+
+			Block block = world.getBlock(X, Y, Z);
+
+			if (!(block != BlockReg.blockGoldCasing)) {
+				world.setBlock(X, Y, Z, BlockReg.blockGoldCasingSeeded);
+				Player.inventory.consumeInventoryItem(this);
+			}
+
+			if (!(block != BlockReg.blockIronCasing)) {
+				world.setBlock(X, Y, Z, BlockReg.blockIronCasingSeeded);
+				Player.inventory.consumeInventoryItem(this);
+			}
+			return true;
 		}
 		else
-			if (Player.canPlayerEdit(X, Y, Z, par7, itemstack)) {
-
-				Block block = world.getBlock(X, Y, Z);
-
-				if (!(block != BlockReg.blockGoldCasing)) {
-					world.setBlock(X, Y, Z, BlockReg.blockGoldCasingSeeded);
-					Player.inventory.consumeInventoryItem(this);
-				}
-
-				if (!(block != BlockReg.blockIronCasing)) {
-					world.setBlock(X, Y, Z, BlockReg.blockIronCasingSeeded);
-					Player.inventory.consumeInventoryItem(this);
-				}
-				return true;
-			}
-		return false;
+			return false;
 	}
 }

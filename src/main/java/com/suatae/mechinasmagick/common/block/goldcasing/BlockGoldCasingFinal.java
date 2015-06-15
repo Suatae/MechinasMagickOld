@@ -60,7 +60,7 @@ public class BlockGoldCasingFinal extends BlockBase implements ITileEntityProvid
 		if (Player.inventory.hasItem(star)) {
 			world.setBlock(X, Y, Z, Blocks.air);
 			Player.inventory.consumeInventoryItem(star);
-			Player.inventory.func_70439_a(seed, 1);
+			Player.inventory.addItemStackToInventory(new ItemStack(seed));
 			world.createExplosion(Player, X, Y, Z, 1f, true);
 			Player.addPotionEffect(new PotionEffect(15, 20 * 20, 2));
 		}

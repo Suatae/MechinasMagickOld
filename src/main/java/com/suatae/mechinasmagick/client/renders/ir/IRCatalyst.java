@@ -7,8 +7,6 @@ import net.minecraftforge.client.IItemRenderer;
 
 import org.lwjgl.opengl.GL11;
 
-import com.suatae.mechinasmagick.common.tileentity.TileEntityCatalyst;
-
 
 
 
@@ -17,7 +15,7 @@ public class IRCatalyst implements IItemRenderer {
 	TileEntitySpecialRenderer	render1;
 	private TileEntity			entity;
 
-	public IRCatalyst(TileEntitySpecialRenderer render1, TileEntityCatalyst tileEntity) {
+	public IRCatalyst(TileEntitySpecialRenderer render1, TileEntity tileEntity) {
 		this.entity = tileEntity;
 		this.render1 = render1;
 	}

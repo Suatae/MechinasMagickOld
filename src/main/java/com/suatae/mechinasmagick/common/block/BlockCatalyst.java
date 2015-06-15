@@ -51,5 +51,4 @@ public class BlockCatalyst extends BlockBase implements ITileEntityProvider {
 	protected boolean canSilkHarvest() {
 		return true;
 	}
-
 }

@@ -46,7 +46,7 @@ public class BlockIronAncient extends CropBase implements ITileEntityProvider {
 
 	@Override
 	protected boolean canPlaceBlockOn(Block Block) {
-		return Block == REF.BLOCK.air;
+		return Block == REF.BLOCK.SEED.SOIL;
 	}
 
 	@Override

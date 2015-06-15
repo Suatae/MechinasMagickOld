@@ -1,30 +1,13 @@
 package com.suatae.mechinasmagick.proxy;
 
 public class CommonProxy {
-	public void preInit() {}
 
-	public void Init() {}
+	public void registerItemRender() {}
 
-	public void postInit() {}
+	public void registerTESRender() {}
 
-	public void registerItemRender() {
-		// TODO Auto-generated method stub
+	public void registerTESRGoldCasing() {}
 
-	}
-
-	public void registerTESRender() {
-		// TODO Auto-generated method stub
-
-	}
-
-	public void registerTESRGoldCasing() {
-		// TODO Auto-generated method stub
-
-	}
-
-	public void registerTESRIronCasing() {
-		// TODO Auto-generated method stub
-
-	}
+	public void registerTESRIronCasing() {}
 
 }

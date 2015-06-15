@@ -7,8 +7,6 @@ import net.minecraftforge.client.IItemRenderer;
 
 import org.lwjgl.opengl.GL11;
 
-import com.suatae.mechinasmagick.common.tileentity.TileEntityIronCrop;
-
 
 
 
@@ -17,7 +15,7 @@ public class IRIronCrop implements IItemRenderer {
 	TileEntitySpecialRenderer	render;
 	private TileEntity			entity;
 
-	public IRIronCrop(TileEntitySpecialRenderer render, TileEntityIronCrop tileEntity) {
+	public IRIronCrop(TileEntitySpecialRenderer render, TileEntity tileEntity) {
 		this.entity = tileEntity;
 		this.render = render;
 	}

@@ -161,9 +161,11 @@ public class WorldGenSeedPillar implements IWorldGenerator {
 						// Layer 2
 						// Inner
 						world.setBlock(X + 1, Y + 2, Z, REF.BLOCK.air, 0, 2);
-						world.setBlock(X + 2, Y + 2 + ee, Z, REF.BLOCK.PILLAR.Door, 0, 2);
+						world.setBlock(X + 2, Y + 2, Z, REF.BLOCK.PILLAR.DoorB, 0, 2);
+						world.setBlock(X + 2, Y + 3, Z, REF.BLOCK.PILLAR.DoorT, 0, 2);
 						world.setBlock(X - 1, Y + 2, Z, REF.BLOCK.air, 0, 2);
-						world.setBlock(X - 2, Y + 2 + ee, Z, REF.BLOCK.PILLAR.Door, 0, 2);
+						world.setBlock(X - 2, Y + 2, Z, REF.BLOCK.PILLAR.DoorB, 0, 2);
+						world.setBlock(X - 2, Y + 3, Z, REF.BLOCK.PILLAR.DoorT, 0, 2);
 						world.setBlock(X + 1 - e, Y + 2, Z + 2 - ee, REF.BLOCK.air, 0, 2);
 						world.setBlock(X + 1 - e, Y + 2, Z - 1 - ee, REF.BLOCK.air, 0, 2);
 						// Center

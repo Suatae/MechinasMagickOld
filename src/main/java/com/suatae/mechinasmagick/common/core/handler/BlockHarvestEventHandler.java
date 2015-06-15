@@ -1,5 +1,6 @@
 package com.suatae.mechinasmagick.common.core.handler;
 
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
 
@@ -20,6 +21,9 @@ public class BlockHarvestEventHandler {
 			event.drops.clear();
 			event.drops.add(new ItemStack(REF.BLOCK.gravel, 1));
 
+		}
+		if (event.block == Blocks.gravel) {
+			event.drops.clear();
 		}
 	}
 

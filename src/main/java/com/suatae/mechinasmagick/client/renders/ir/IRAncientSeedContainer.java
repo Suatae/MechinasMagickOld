@@ -7,8 +7,6 @@ import net.minecraftforge.client.IItemRenderer;
 
 import org.lwjgl.opengl.GL11;
 
-import com.suatae.mechinasmagick.common.tileentity.TileEntityAncientContainer;
-
 
 
 
@@ -17,8 +15,7 @@ public class IRAncientSeedContainer implements IItemRenderer {
 	TileEntitySpecialRenderer	render;
 	private TileEntity			entity;
 
-	public IRAncientSeedContainer(TileEntitySpecialRenderer render,
-			TileEntityAncientContainer tileEntity) {
+	public IRAncientSeedContainer(TileEntitySpecialRenderer render, TileEntity tileEntity) {
 		this.entity = tileEntity;
 		this.render = render;
 	}
