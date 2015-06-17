@@ -5,10 +5,10 @@ import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
+
+import com.suatae.mechinasmagick.client.creativetab.MechinasTabs;
 
 
 
@@ -21,7 +21,8 @@ public class AncientDoorBase extends BlockBase {
 		this.setStepSound(Block.soundTypeStone);
 		this.setBlockUnbreakable();
 		this.setTickRandomly(true);
-		this.setBlockBounds(0.095F, 0, 0, 0.905F, 1.0F, 1.0F);
+		this.setCreativeTab(MechinasTabs.MechinasMagick_TAB);
+		this.setBlockBounds(0.06F, 0, 0, 0.94F, 1.0F, 1.0F);
 	}
 
 	@Override
@@ -37,6 +38,11 @@ public class AncientDoorBase extends BlockBase {
 	@Override
 	public boolean renderAsNormalBlock() {
 		return false;
+	}
+
+	@Override
+	public int getRenderType() {
+		return -1;
 	}
 
 	@Override
@@ -65,10 +71,11 @@ public class AncientDoorBase extends BlockBase {
 		return world.func_147480_a(X, Y, Z, true);
 	}
 
-	@Override
-	public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z,
-			EntityPlayer player) {
-		return null;
-	}
+	// @Override
+	// public ItemStack getPickBlock(MovingObjectPosition target, World world,
+	// int x, int y, int z,
+	// EntityPlayer player) {
+	// return null;
+	// }
 
 }

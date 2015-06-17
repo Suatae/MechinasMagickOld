@@ -1,6 +1,7 @@
 package com.suatae.mechinasmagick.client.renders.ir;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
@@ -30,13 +31,26 @@ public class IRToolStoneMallet implements IItemRenderer {
 	public boolean handleRenderType(ItemStack itemstack, ItemRenderType type) {
 		switch (type) {
 			case EQUIPPED:
-				return true;
+				if (Minecraft.getMinecraft().isFancyGraphicsEnabled() == true) {
+					return true;
+				}
+				else {
+					return false;
+				}
 			case EQUIPPED_FIRST_PERSON:
-				return true;
+				if (Minecraft.getMinecraft().isFancyGraphicsEnabled() == true) {
+					return true;
+				}
+				else {
+					return false;
+				}
 			case ENTITY:
-				return true;
-				// case INVENTORY:
-				// return true;
+				if (Minecraft.getMinecraft().isFancyGraphicsEnabled() == true) {
+					return true;
+				}
+				else {
+					return false;
+				}
 			default:
 				return false;
 		}
@@ -83,31 +97,30 @@ public class IRToolStoneMallet implements IItemRenderer {
 				break;
 
 			case ENTITY:
-				GL11.glPushMatrix();
-				Minecraft.getMinecraft().renderEngine.bindTexture(MalletTexture);
+				if (RenderItem.renderInFrame == true) {
+					GL11.glPushMatrix();
 
-				GL11.glRotatef(180F, 1.0f, 0.0f, 0.0f);
-				GL11.glTranslatef(0F, -1.2F, 0F);
+					Minecraft.getMinecraft().renderEngine.bindTexture(MalletTexture);
 
-				model.render((Entity) data[1], 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
+					GL11.glRotatef(180F, 1.0f, 0.0f, 0.0f);
+					GL11.glTranslatef(0F, -0.5F, 0F);
+					GL11.glScalef(0.7f, 0.7f, 0.7f);
+					model.render((Entity) data[1], 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
+					GL11.glPopMatrix();
 
-				GL11.glPopMatrix();
+				}
+				else {
+					GL11.glPushMatrix();
+					Minecraft.getMinecraft().renderEngine.bindTexture(MalletTexture);
+
+					GL11.glRotatef(180F, 1.0f, 0.0f, 0.0f);
+					GL11.glTranslatef(0F, -1.2F, 0F);
+
+					model.render((Entity) data[1], 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
+
+					GL11.glPopMatrix();
+				}
 				break;
-
-			// WHAT AM I MISSING HERE!?!?!?!?!?!
-
-			// case INVENTORY:
-			// GL11.glPushMatrix();
-			// Minecraft.getMinecraft().renderEngine.bindTexture(MalletTexture);
-			//
-			// // GL11.glRotatef(200F, 1.0f, 0.0f, 0.0f);
-			// // GL11.glRotatef(-80F, 0.0f, 1.0f, 0.0f);
-			// GL11.glTranslatef(1.0F, 1.0F, 1.0F);
-			// GL11.glScalef(5.0F, 5.0F, 5.0F);
-			//
-			// GL11.glPopMatrix();
-			//
-			// break;
 			default:
 				break;
 		}

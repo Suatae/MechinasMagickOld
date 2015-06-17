@@ -1,4 +1,4 @@
-package com.suatae.mechinasmagick.client.renders.ir;
+package com.suatae.mechinasmagick.client.renders.ir.blocks;
 
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.item.ItemStack;

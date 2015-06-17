@@ -1,9 +1,13 @@
 package com.suatae.mechinasmagick.client.renders;
 
+import net.minecraft.block.Block;
+import net.minecraft.client.renderer.OpenGlHelper;
+import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.World;
 
 import org.lwjgl.opengl.GL11;
 
@@ -62,5 +66,16 @@ public class TESRBlockCache extends TileEntitySpecialRenderer {
 
 	protected int shouldrenderPass() {
 		return 0;
+	}
+
+	private void adjustLightFixture(World world, int i, int j, int k, Block block) {
+		Tessellator tess = Tessellator.instance;
+		float brightness = block.getLightValue(world, i, j, k);
+		int skyLight = world.getLightBrightnessForSkyBlocks(i, j, k, 0);
+		int modulousModifier = skyLight % 65536;
+		int divModifier = skyLight / 65536;
+		tess.setColorOpaque_F(brightness, brightness, brightness);
+		OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, modulousModifier,
+				divModifier);
 	}
 }

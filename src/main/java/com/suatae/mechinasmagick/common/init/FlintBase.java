@@ -17,6 +17,9 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
+
+import com.suatae.mechinasmagick.client.creativetab.MechinasTabs;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -31,7 +34,7 @@ public class FlintBase extends BlockBase {
 		super(Material.wood);
 		this.setHardness(0.2f);
 		this.setStepSound(Block.soundTypeStone);
-		// this.setCreativeTab(MechinasTabs.MechinasMagick_TAB);
+		this.setCreativeTab(MechinasTabs.MechinasMagick_TAB);
 		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.25F, 1.0F);
 	}
 

@@ -4,6 +4,8 @@ import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.MinecraftForgeClient;
 
+import com.suatae.mechinasmagick.client.renders.TESRAncientDoorB;
+import com.suatae.mechinasmagick.client.renders.TESRAncientDoorT;
 import com.suatae.mechinasmagick.client.renders.TESRAncientSeedContainer;
 import com.suatae.mechinasmagick.client.renders.TESRBlockCache;
 import com.suatae.mechinasmagick.client.renders.TESRBranch;
@@ -16,18 +18,35 @@ import com.suatae.mechinasmagick.client.renders.flint.TESRBlockFlint01;
 import com.suatae.mechinasmagick.client.renders.flint.TESRBlockFlint02;
 import com.suatae.mechinasmagick.client.renders.flint.TESRBlockFlint03;
 import com.suatae.mechinasmagick.client.renders.flint.TESRBlockFlint04;
-import com.suatae.mechinasmagick.client.renders.ir.IRBranch;
-import com.suatae.mechinasmagick.client.renders.ir.IRCatalyst;
 import com.suatae.mechinasmagick.client.renders.ir.IRToolIronSteelMallet;
 import com.suatae.mechinasmagick.client.renders.ir.IRToolStoneMallet;
 import com.suatae.mechinasmagick.client.renders.ir.IRToolWoodMallet;
-import com.suatae.mechinasmagick.client.renders.ir.flint.IRBlockFlint01;
-import com.suatae.mechinasmagick.client.renders.ir.flint.IRBlockFlint02;
-import com.suatae.mechinasmagick.client.renders.ir.flint.IRBlockFlint03;
-import com.suatae.mechinasmagick.client.renders.ir.flint.IRBlockFlint04;
+import com.suatae.mechinasmagick.client.renders.ir.blocks.IRAncientDoorB;
+import com.suatae.mechinasmagick.client.renders.ir.blocks.IRAncientDoorT;
+import com.suatae.mechinasmagick.client.renders.ir.blocks.IRAncientSeedContainer;
+import com.suatae.mechinasmagick.client.renders.ir.blocks.IRBranch;
+import com.suatae.mechinasmagick.client.renders.ir.blocks.IRCatalyst;
+import com.suatae.mechinasmagick.client.renders.ir.blocks.IRGoldCrop;
+import com.suatae.mechinasmagick.client.renders.ir.blocks.IRIronCrop;
+import com.suatae.mechinasmagick.client.renders.ir.blocks.cache.IRCacheC;
+import com.suatae.mechinasmagick.client.renders.ir.blocks.cache.IRCacheE;
+import com.suatae.mechinasmagick.client.renders.ir.blocks.cache.IRCacheR;
+import com.suatae.mechinasmagick.client.renders.ir.blocks.cache.IRCacheU;
+import com.suatae.mechinasmagick.client.renders.ir.blocks.flint.IRBlockFlint01;
+import com.suatae.mechinasmagick.client.renders.ir.blocks.flint.IRBlockFlint02;
+import com.suatae.mechinasmagick.client.renders.ir.blocks.flint.IRBlockFlint03;
+import com.suatae.mechinasmagick.client.renders.ir.blocks.flint.IRBlockFlint04;
+import com.suatae.mechinasmagick.client.renders.ir.blocks.goldcasing.IRGoldCasing;
+import com.suatae.mechinasmagick.client.renders.ir.blocks.goldcasing.IRGoldCasingFinal;
+import com.suatae.mechinasmagick.client.renders.ir.blocks.goldcasing.IRGoldCasingSeeded;
+import com.suatae.mechinasmagick.client.renders.ir.blocks.ironcasing.IRIronCasing;
+import com.suatae.mechinasmagick.client.renders.ir.blocks.ironcasing.IRIronCasingFinal;
+import com.suatae.mechinasmagick.client.renders.ir.blocks.ironcasing.IRIronCasingSeeded;
 import com.suatae.mechinasmagick.common.init.BlockReg;
 import com.suatae.mechinasmagick.common.init.ItemReg;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityAncientContainer;
+import com.suatae.mechinasmagick.common.tileentity.TileEntityAncientDoorB;
+import com.suatae.mechinasmagick.common.tileentity.TileEntityAncientDoorT;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityBranch;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityCatalyst;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityGoldCrop;
@@ -74,28 +93,8 @@ public class ClientProxy extends CommonProxy {
 	TileEntitySpecialRenderer	r16	= new TESRBlockCache();
 	TileEntitySpecialRenderer	r17	= new TESRBlockCache();
 	TileEntitySpecialRenderer	r18	= new TESRBlockCache();
-
-	@Override
-	public void registerItemRender() {
-		MinecraftForgeClient.registerItemRenderer(ItemReg.woodMallet, new IRToolWoodMallet());
-		MinecraftForgeClient.registerItemRenderer(ItemReg.stoneMallet, new IRToolStoneMallet());
-		MinecraftForgeClient.registerItemRenderer(ItemReg.ironsteelMallet,
-				new IRToolIronSteelMallet());
-
-		// Find out why it won't render!!!!!
-
-		MinecraftForgeClient.registerItemRenderer(ItemReg.itemBranch, new IRBranch());
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockCatalyst),
-				new IRCatalyst(r1, new TileEntityCatalyst()));
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockFlint01),
-				new IRBlockFlint01(r11, new TileEntityFlint01()));
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockFlint02),
-				new IRBlockFlint02(r12, new TileEntityFlint02()));
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockFlint03),
-				new IRBlockFlint03(r13, new TileEntityFlint03()));
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockFlint04),
-				new IRBlockFlint04(r14, new TileEntityFlint04()));
-	}
+	TileEntitySpecialRenderer	r19	= new TESRAncientDoorB();
+	TileEntitySpecialRenderer	r20	= new TESRAncientDoorT();
 
 	@Override
 	public void registerTESRender() {
@@ -114,6 +113,9 @@ public class ClientProxy extends CommonProxy {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCacheUncommon.class, r16);
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCacheRare.class, r17);
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCacheElite.class, r18);
+
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityAncientDoorB.class, r19);
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityAncientDoorT.class, r20);
 	}
 
 	@Override
@@ -130,5 +132,76 @@ public class ClientProxy extends CommonProxy {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityIronCasing.class, r8);
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityIronCasingSeeded.class, r9);
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityIronCasingFinal.class, r10);
+	}
+
+	@Override
+	public void registerItemRender() {
+
+		// Items
+		MinecraftForgeClient.registerItemRenderer(ItemReg.woodMallet, new IRToolWoodMallet());
+		MinecraftForgeClient.registerItemRenderer(ItemReg.stoneMallet, new IRToolStoneMallet());
+		MinecraftForgeClient.registerItemRenderer(ItemReg.ironsteelMallet,
+				new IRToolIronSteelMallet());
+
+		// Cache
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockCacheC),
+				new IRCacheC(r15, new TileEntityCacheCommon()));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockCacheU),
+				new IRCacheU(r16, new TileEntityCacheUncommon()));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockCacheR),
+				new IRCacheR(r17, new TileEntityCacheRare()));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockCacheE),
+				new IRCacheE(r18, new TileEntityCacheElite()));
+
+		// Doors
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockADoorB),
+				new IRAncientDoorB(r19, new TileEntityAncientDoorB()));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockADoorT),
+				new IRAncientDoorT(r20, new TileEntityAncientDoorT()));
+
+		// Flints
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockFlint01),
+				new IRBlockFlint01(r11, new TileEntityFlint01()));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockFlint02),
+				new IRBlockFlint02(r12, new TileEntityFlint02()));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockFlint03),
+				new IRBlockFlint03(r13, new TileEntityFlint03()));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockFlint04),
+				new IRBlockFlint04(r14, new TileEntityFlint04()));
+
+		// Casing Gold
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockGoldCasing),
+				new IRGoldCasing(r5, new TileEntityGoldCasing()));
+		MinecraftForgeClient.registerItemRenderer(Item
+				.getItemFromBlock(BlockReg.blockGoldCasingSeeded), new IRGoldCasingSeeded(r6,
+				new TileEntityGoldCasingSeeded()));
+		MinecraftForgeClient.registerItemRenderer(Item
+				.getItemFromBlock(BlockReg.blockGoldCasingFinal), new IRGoldCasingFinal(r7,
+				new TileEntityGoldCasingFinal()));
+
+		// Casing Iron
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockIronCasing),
+				new IRIronCasing(r8, new TileEntityIronCasing()));
+		MinecraftForgeClient.registerItemRenderer(Item
+				.getItemFromBlock(BlockReg.blockIronCasingSeeded), new IRIronCasingSeeded(r9,
+				new TileEntityIronCasingSeeded()));
+		MinecraftForgeClient.registerItemRenderer(Item
+				.getItemFromBlock(BlockReg.blockIronCasingFinal), new IRIronCasingFinal(r10,
+				new TileEntityIronCasingFinal()));
+
+		// Crops
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockAncientGold),
+				new IRGoldCrop(r2, new TileEntityGoldCrop()));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockAncientIron),
+				new IRIronCrop(r3, new TileEntityIronCrop()));
+
+		// Other
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockASContainer),
+				new IRAncientSeedContainer(r, new TileEntityAncientContainer()));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockCatalyst),
+				new IRCatalyst(r1, new TileEntityCatalyst()));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockBranch),
+				new IRBranch(r4, new TileEntityBranch()));
+
 	}
 }

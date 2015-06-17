@@ -1,22 +1,30 @@
 package com.suatae.mechinasmagick.common.block;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.ITileEntityProvider;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.init.AncientDoorBase;
+import com.suatae.mechinasmagick.common.tileentity.TileEntityAncientDoorB;
 
 
 
 
 
-public class BlockAncientDoorB extends AncientDoorBase {
+public class BlockAncientDoorB extends AncientDoorBase implements ITileEntityProvider {
 
 	public BlockAncientDoorB() {
 		super();
 		this.setBlockName(REF.NAME.BLOCK.ADOOR);
 		this.setBlockTextureName(REF.NAME.BLOCK.ADOOR);
 
+	}
+
+	@Override
+	public TileEntity createNewTileEntity(World var1, int var2) {
+		return new TileEntityAncientDoorB();
 	}
 
 	@Override

@@ -5,7 +5,6 @@ import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 
 import com.suatae.mechinasmagick.common.core.lib.REF;
-import com.suatae.mechinasmagick.common.item.Branch;
 import com.suatae.mechinasmagick.common.item.Builder;
 import com.suatae.mechinasmagick.common.item.Engineer;
 import com.suatae.mechinasmagick.common.item.Leaf;
@@ -55,7 +54,6 @@ public class ItemReg {
 
 	// Misc
 	public static final Item	itemLeaf				= new Leaf();
-	public static final Item	itemBranch				= new Branch();
 	public static final Item	itemPlantFiber			= new PlantFiber();
 
 	// Player Class
@@ -83,7 +81,6 @@ public class ItemReg {
 
 		// Misc
 		GameRegistry.registerItem(itemLeaf, "itemLeaf");
-		GameRegistry.registerItem(itemBranch, "itemBranch");
 		GameRegistry.registerItem(itemPlantFiber, "itemPlantFiber");
 
 		// Player Class

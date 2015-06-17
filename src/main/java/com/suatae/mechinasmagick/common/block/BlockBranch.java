@@ -17,13 +17,11 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.World;
 
+import com.suatae.mechinasmagick.client.creativetab.MechinasTabs;
 import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.init.BlockBase;
 import com.suatae.mechinasmagick.common.init.ItemReg;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityBranch;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 
 
@@ -38,6 +36,7 @@ public class BlockBranch extends BlockBase implements ITileEntityProvider {
 		this.setStepSound(Block.soundTypeStone);
 		this.setHardness(1.0F);
 		this.setResistance(2.5F);
+		this.setCreativeTab(MechinasTabs.MechinasMagick_TAB);
 		this.setBlockBounds(0, 0, 0, 1.0F, 0.20F, 1.0F);
 	}
 
@@ -105,11 +104,5 @@ public class BlockBranch extends BlockBase implements ITileEntityProvider {
 	@Override
 	public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int X, int Y, int Z) {
 		return null;
-	}
-
-	@Override
-	@SideOnly(Side.CLIENT)
-	public Item getItem(World world, int X, int Y, int Z) {
-		return ItemReg.itemBranch;
 	}
 }

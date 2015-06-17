@@ -33,10 +33,6 @@ public class MechinasMagick {
 	@Mod.EventHandler
 	public static void PreLoad(FMLPreInitializationEvent event) {
 
-		proxy.registerItemRender();
-		proxy.registerTESRender();
-		proxy.registerTESRGoldCasing();
-		proxy.registerTESRIronCasing();
 		GenHandler.preInit();
 		EventHandler.preInit(event);
 
@@ -52,6 +48,10 @@ public class MechinasMagick {
 
 		BlockReg.init();
 		ItemReg.init();
+		proxy.registerTESRender();
+		proxy.registerTESRGoldCasing();
+		proxy.registerTESRIronCasing();
+		proxy.registerItemRender();
 		GenHandler.Init();
 		EventHandler.Init(event);
 		RecipeRemover.voidRecipe();

@@ -1,4 +1,4 @@
-package com.suatae.mechinasmagick.client.renders.ir.ironcasing;
+package com.suatae.mechinasmagick.client.renders.ir.blocks.ironcasing;
 
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.item.ItemStack;
@@ -35,8 +35,25 @@ public class IRIronCasing implements IItemRenderer {
 
 	@Override
 	public void renderItem(ItemRenderType type, ItemStack item, Object... data) {
-		if (type == IItemRenderer.ItemRenderType.ENTITY)
-			GL11.glTranslatef(-0.5F, 0.0F, -0.5F);
-		this.render.renderTileEntityAt(this.entity, 0.0D, 0.0D, 0.0D, 0.0F);
+		if (type == IItemRenderer.ItemRenderType.ENTITY) {
+			GL11.glTranslatef(-0.75F, -0.5F, -0.75F);
+			GL11.glScalef(1.4F, 1.4F, 1.4F);
+			this.render.renderTileEntityAt(this.entity, 0.0D, 0.0D, 0.0D, 0.0F);
+		}
+		if (type == IItemRenderer.ItemRenderType.EQUIPPED) {
+			GL11.glTranslatef(-0.1F, 0F, -0.1F);
+			GL11.glScalef(1.2F, 1.2F, 1.2F);
+			this.render.renderTileEntityAt(this.entity, 0.0D, 0.0D, 0.0D, 0.0F);
+		}
+		if (type == IItemRenderer.ItemRenderType.EQUIPPED_FIRST_PERSON) {
+			GL11.glTranslatef(-0.1F, 0F, -0.1F);
+			GL11.glScalef(1.2F, 1.2F, 1.2F);
+			this.render.renderTileEntityAt(this.entity, 0.0D, 0.0D, 0.0D, 0.0F);
+		}
+		if (type == IItemRenderer.ItemRenderType.INVENTORY) {
+			GL11.glTranslatef(-0.5F, -0.45F, -0.5F);
+			GL11.glScalef(1.2F, 1.2F, 1.2F);
+			this.render.renderTileEntityAt(this.entity, 0.0D, 0.0D, 0.0D, 0.0F);
+		}
 	}
 }

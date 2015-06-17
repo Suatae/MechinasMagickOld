@@ -35,6 +35,8 @@ import com.suatae.mechinasmagick.common.block.ironcasing.BlockIronCasingFinal;
 import com.suatae.mechinasmagick.common.block.ironcasing.BlockIronCasingSeeded;
 import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityAncientContainer;
+import com.suatae.mechinasmagick.common.tileentity.TileEntityAncientDoorB;
+import com.suatae.mechinasmagick.common.tileentity.TileEntityAncientDoorT;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityBranch;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityCatalyst;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityGoldCrop;
@@ -155,6 +157,9 @@ public class BlockReg {
 		GameRegistry.registerTileEntity(TileEntityCacheUncommon.class, "TileEntityCacheUncommon");
 		GameRegistry.registerTileEntity(TileEntityCacheRare.class, "TileEntityCacheRare");
 		GameRegistry.registerTileEntity(TileEntityCacheElite.class, "TileEntityCacheElite");
+
+		GameRegistry.registerTileEntity(TileEntityAncientDoorB.class, "TileEntityAncientDoorB");
+		GameRegistry.registerTileEntity(TileEntityAncientDoorT.class, "TileEntityAncientDoorT");
 
 		GameRegistry.registerBlock(blockStoneBrick, ItemBlockStoneBrick.class, "blockStoneBrick");
 
